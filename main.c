@@ -514,6 +514,11 @@ static void log_init(void)
  */
 static void power_manage(void)
 {
+#if (__FPU_USED == 1)
+__set_FPSCR(__get_FPSCR() & ~(0x0000009F)); 
+(void) __get_FPSCR();
+NVIC_ClearPendingIRQ(FPU_IRQn);
+#endif
     ret_code_t err_code = sd_app_evt_wait();
     APP_ERROR_CHECK(err_code);
 }
