@@ -71,6 +71,9 @@
 .\_build\main.o: .\nordic\h\nrf_drv_twi.h
 .\_build\main.o: .\nordic\h\nrf_twi.h
 .\_build\main.o: .\nordic\h\nrf_twim.h
-.\_build\main.o: .\bosch\API\bme680.h
-.\_build\main.o: .\bosch\API\bme680_defs.h
 .\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\_build\main.o: .\bosch\BSEC\algo\bsec_interface.h
+.\_build\main.o: .\bosch\BSEC\algo\bsec_datatypes.h
+.\_build\main.o: .\bosch\BSEC\example\bsec_integration.h
+.\_build\main.o: .\bosch\BSEC\API\bme680.h
+.\_build\main.o: .\bosch\BSEC\API\sensor_api_common_types.h

@@ -69,42 +69,52 @@
 #include "nrf_delay.h"
 #include "nrf_gpio.h"
 #include "nrf_drv_twi.h"
-#include "bme680.h"
 #include "math.h"
-
+#include "bsec_interface.h"
+#include "bsec_datatypes.h"
+#include "bsec_integration.h"
 
 
 #define TWI_INSTANCE_ID   0
 #define BME680_ADDR       0x77U
 #define MAX44009_ADDR			0x4AU
-#define MAX44009_EN_PIN		3
-#define MAX44009_INT_PIN	19
-#define BME680_EN_PIN			4
 #define MEIN_TIMER_INTERVAL         APP_TIMER_TICKS(60000)              // 20s
 
 static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);
 APP_TIMER_DEF(m_mein_timer_id);
 volatile uint8_t TransferPending = 0;
 static uint8_t m_sample;
-struct bme680_field_data bme680_data;
 static ble_advdata_t advdata;
-struct bme680_dev gas_sensor;
 uint16_t meas_period;
 uint8_t max44009_data[8]	= {0};
+uint64_t	system_time			=	0;
+
+/* Timestamp variables */
+int64_t time_stamp = 0;
+int64_t time_stamp_trigger = 0;
+int64_t time_stamp_interval_ms = 0;
+
+/* Allocate enough memory for up to 4 physical inputs thus array size of 4 given in case of bsec_inputs */
+bsec_input_t bsec_inputs[5];
+/* Number of inputs to BSEC */
+uint8_t num_bsec_inputs = 0;
+/* BSEC sensor settings struct */
+bsec_bme_settings_t sensor_settings;
+bsec_library_return_t bsec_status = BSEC_OK;
 
 void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context);
 void twi_init (void);
 void gpio_init(void);
-void bme680_read(void);
-void user_delay_ms(uint32_t period);
-int8_t user_i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len);
-int8_t user_i2c_write(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len);
+void sleep(uint32_t t_ms);
+int8_t bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len);
+int8_t bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len);
 __STATIC_INLINE void data_handler(uint8_t temp);
 static void mein_timer_timeout_handler(void * p_context);
 static void application_timers_start(void);
-void bme680_setup(void);
 void max44009_read(void);
 uint32_t calc_lux(uint8_t *data);
+int64_t get_timestamp_us(void);
+void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy, float temperature, float humidity, float pressure, float raw_temperature, float raw_humidity, float gas, bsec_library_return_t bsec_status);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -538,10 +548,10 @@ int main(void)
     services_init();
     advertising_init();
     conn_params_init();
-		bme680_setup();
 
     // Start execution.
     NRF_LOG_INFO("Blinky example started.");
+		bsec_iot_init(BSEC_SAMPLE_RATE_ULP, 0.0f, bus_write, bus_read, sleep);
 		application_timers_start();
 
     // Enter main loop.
@@ -573,14 +583,36 @@ static void mein_timer_timeout_handler(void * p_context)
 		uint8_t		bit_container[11]	=	{0};
 		char			str_buff[25]			=	{0};
 
-		bme680_read();												// Ergebnis in bme680_data
+
+		
+		time_stamp = get_timestamp_us() * 1000;
+        
+		/* Retrieve sensor settings to be used in this time instant by calling bsec_sensor_control */
+		bsec_status = bsec_sensor_control(time_stamp, &sensor_settings);
+		
+		/* Trigger a measurement if necessary */
+		bme680_bsec_trigger_measurement(&sensor_settings, sleep);
+		
+		/* Read data from last measurement */
+		num_bsec_inputs = 0;
+		bme680_bsec_read_data(time_stamp, bsec_inputs, &num_bsec_inputs, sensor_settings.process_data);
+		
+		/* Time to invoke BSEC to perform the actual processing */
+		bme680_bsec_process_data(bsec_inputs, num_bsec_inputs, output_ready);
+		
+		
+		
+		/* Compute how long we can sleep until we need to call bsec_sensor_control() next */
+		/* Time_stamp is converted from microseconds to nanoseconds first and then the difference to milliseconds */
+		time_stamp_interval_ms = (sensor_settings.next_call - get_timestamp_us() * 1000) / 1000000;
+		system_time +=	time_stamp_interval_ms;
 		max44009_read();											// Ergebnis in max44009_data[]
 //		batt 		= batt_read();						// Ergebnis in batt_val
 //		feuchte	=	feuchte_read();					// Ergebnis in feuchte_val
 		
-		temp			= (bme680_data.temperature / 10);
-		humi			=	(bme680_data.humidity / 100);
-		press 		= (bme680_data.pressure / 100);
+//		temp			= (bme680_data.temperature / 10);
+//		humi			=	(bme680_data.humidity / 100);
+//		press 		= (bme680_data.pressure / 100);
 		quali			= 0; 		// kommt später ;-)
 		illu			= calc_lux(max44009_data);
 		feuchte		=	0;		// kommt später
@@ -702,74 +734,14 @@ void twi_init (void)
     nrf_drv_twi_enable(&m_twi);
 }
 
-
-
-void bme680_setup(void)
+void sleep(uint32_t t_ms)
 {
-	uint8_t set_required_settings;
-
-	
-	gas_sensor.dev_id = BME680_I2C_ADDR_SECONDARY;
-	gas_sensor.intf = BME680_I2C_INTF;
-	gas_sensor.read = user_i2c_read;
-	gas_sensor.write = user_i2c_write;
-	gas_sensor.delay_ms = user_delay_ms;
-
-	bme680_init(&gas_sensor);	
-
-	/* Set the temperature, pressure and humidity settings */
-	gas_sensor.tph_sett.os_hum = BME680_OS_2X;
-	gas_sensor.tph_sett.os_pres = BME680_OS_4X;
-	gas_sensor.tph_sett.os_temp = BME680_OS_8X;
-	gas_sensor.tph_sett.filter = BME680_FILTER_SIZE_3;
-
-	/* Set the remaining gas sensor settings and link the heating profile */
-	gas_sensor.gas_sett.run_gas = BME680_DISABLE_GAS_MEAS;
-	/* Create a ramp heat waveform in 3 steps */
-	gas_sensor.gas_sett.heatr_temp = 0;//320; /* degree Celsius */
-	gas_sensor.gas_sett.heatr_dur = 0;//150; /* milliseconds */
-
-	/* Select the power mode */
-	/* Must be set before writing the sensor configuration */
-	gas_sensor.power_mode = BME680_FORCED_MODE; 
-
-	/* Set the required sensor settings needed */
-	set_required_settings = BME680_OST_SEL | BME680_OSP_SEL | BME680_OSH_SEL | BME680_FILTER_SEL | BME680_GAS_SENSOR_SEL;
-		
-	/* Set the desired sensor configuration */
-	bme680_set_sensor_settings(set_required_settings,&gas_sensor);
-}
-
-void bme680_read(void)
-{
-
-	/* Set the power mode */
-	bme680_set_sensor_mode(&gas_sensor);
-
-	/* Get the total measurement duration so as to sleep or wait till the
-	 * measurement is complete */
-
-	bme680_get_profile_dur(&meas_period, &gas_sensor);
-	user_delay_ms(meas_period); /* Delay till the measurement is ready */
-	
-
-	bme680_get_sensor_data(&bme680_data, &gas_sensor);
-
-//	NRF_LOG_INFO("T: %.2d degC, P: %.2d hPa, H %.2d %%rH, G: %d ohms ", (uint32_t)(bme680_data.temperature), (uint32_t)(bme680_data.pressure), (uint32_t)(bme680_data.humidity), (uint32_t)bme680_data.gas_resistance);
-	if(bme680_data.status & BME680_HEAT_STAB_MSK)
-	{
-		NRF_LOG_INFO(", G: %d ohms", (uint32_t)bme680_data.gas_resistance);
-	}
-}
-
-void user_delay_ms(uint32_t period)
-{
-//	NRF_LOG_INFO("DL: %dms", period);
-	nrf_delay_ms(period);
+	system_time +=	t_ms;
+	nrf_delay_ms(t_ms);
 }
 
 
-int8_t user_i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)
+int8_t bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len)
 {
     int8_t rslt = 0; /* Return 0 for Success, non-zero for failure */
 
@@ -777,39 +749,38 @@ int8_t user_i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16
 		rslt = nrf_drv_twi_tx(&m_twi, BME680_ADDR, &reg_addr, 1, true);
 		while ( TransferPending == 1) {}
 		TransferPending = 1;
-		rslt = nrf_drv_twi_rx(&m_twi, BME680_ADDR, reg_data, len);
+		rslt = nrf_drv_twi_rx(&m_twi, BME680_ADDR, reg_data_ptr, data_len);
 		while ( TransferPending == 1) {}
-		
-		//Print: RD <reg_addr> <len> <reg_data... >
-//		NRF_LOG_INFO(" RD: reg_addr: 0x%x,; length: %d,  ",reg_addr, len);
-//		for ( uint16_t i = 0; i < len; i++)
-//			{
-//				NRF_LOG_INFO("RD: reg_data[%d]: 0x%x", i, reg_data[i]);
-//			}
 				
     return rslt;
 }
 
-int8_t user_i2c_write(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)
+int8_t bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len)
 {
     int8_t rslt = 0; /* Return 0 for Success, non-zero for failure */
     uint8_t	send_tmp[200]	= {0};
 		send_tmp[0] 	= reg_addr;
-		memcpy(send_tmp +1, reg_data, len);
+		memcpy(send_tmp +1, reg_data_ptr, data_len);
 
-		//Print: WR <reg_addr> <len> <reg_data... > 
-//		NRF_LOG_INFO(" WR: reg_addr: 0x%x,; length: %d,  ",reg_addr, len);
-//		for ( uint16_t i = 0; i < len; i++)
-//			{
-//				NRF_LOG_INFO("WR: reg_data[%d]: 0x%x", i, reg_data[i]);
-//			}
-		
 		TransferPending = 1;
-		rslt = nrf_drv_twi_tx(&m_twi, BME680_ADDR, send_tmp, len +1, false);
+		rslt = nrf_drv_twi_tx(&m_twi, BME680_ADDR, send_tmp, data_len +1, false);
 		while (TransferPending == 1) {}
 	
     return rslt;
 }
 
+int64_t get_timestamp_us(void)
+{
+    int64_t system_current_time = 0;
+		system_current_time	= (int64_t)(system_time * 1000);
+    return system_current_time;
+}
 
+void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy, float temperature, float humidity,
+     float pressure, float raw_temperature, float raw_humidity, float gas, bsec_library_return_t bsec_status)
+{
+    // ...
+    // Please insert system specific code to further process or display the BSEC outputs
+    // ...
+}
 

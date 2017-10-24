@@ -128,6 +128,13 @@ void bsec_iot_init(float sample_rate, float temperature_offset, sensor_write bus
  * @return      none
  */ 
 void bsec_iot_loop(sleep_fct sleep, get_timestamp_us_fct get_timestamp_us, output_ready_fct output_ready);
+void bme680_bsec_process_data(bsec_input_t *bsec_inputs, uint8_t num_bsec_inputs, output_ready_fct output_ready);
+void bme680_bsec_read_data(int64_t time_stamp_trigger, bsec_input_t *inputs, uint8_t *num_bsec_inputs, int32_t bsec_process_data);
+void bme680_bsec_trigger_measurement(bsec_bme_settings_t *sensor_settings, sleep_fct sleep);
+bsec_library_return_t bme680_bsec_update_subscription(float sample_rate);
+
+
+
 
 #ifdef __cplusplus
 }

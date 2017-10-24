@@ -22,12 +22,35 @@ Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
 C:\Users\Bugs\Desktop\sensor\Software\sensor\ble_app_blinky_pca10040_s132.uvprojx
-Project File Date:  10/18/2017
+Project File Date:  10/24/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'nrf52832_xxaa'
-".\_build\nrf52832_xxaa.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(640): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+                err_code = sd_ble_gap_device_name_set(&sec_mode, str_buff, strlen(str_buff));
+main.c(514): warning:  #177-D: function "log_init"  was declared but never referenced
+  static void log_init(void)
+main.c: 2 warnings, 0 errors
+compiling bsec_integration.c...
+bosch\BSEC\example\bsec_integration.c(164): warning:  #550-D: variable "bme680_status"  was set but never used
+      enum bme680_return_type bme680_status = BME680_COMM_RES_OK;
+bosch\BSEC\example\bsec_integration.c(165): warning:  #550-D: variable "bsec_status"  was set but never used
+      bsec_library_return_t bsec_status = BSEC_OK;
+bosch\BSEC\example\bsec_integration.c(200): warning:  #550-D: variable "bme680_status"  was set but never used
+      enum bme680_return_type bme680_status = BME680_COMM_RES_OK;
+bosch\BSEC\example\bsec_integration.c(273): warning:  #550-D: variable "bme680_status"  was set but never used
+      enum bme680_return_type bme680_status = BME680_COMM_RES_OK;
+bosch\BSEC\example\bsec_integration.c(437): warning:  #177-D: variable "time_stamp_trigger"  was declared but never referenced
+      int64_t time_stamp_trigger = 0;
+bosch\BSEC\example\bsec_integration.c(449): warning:  #550-D: variable "bsec_status"  was set but never used
+      bsec_library_return_t bsec_status = BSEC_OK;
+bosch\BSEC\example\bsec_integration.c: 6 warnings, 0 errors
+linking...
+Program Size: Code=42284 RO-data=2724 RW-data=104 ZI-data=10256  
+FromELF: creating hex file...
+".\_build\nrf52832_xxaa.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -51,12 +74,12 @@ Package Vendor: NordicSemiconductor
 <h2>Collection of Component Files used:</h2>
 
    * Component: NordicSemiconductor::Device:Startup:8.14.1
-      Include file:  Device\Include\system_nrf52.h
-      Source file:   Device\Source\system_nrf52.c
       Source file:   Device\Source\arm\arm_startup_nrf52.s
+      Source file:   Device\Source\system_nrf52.c
+      Include file:  Device\Include\system_nrf52.h
 
    * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

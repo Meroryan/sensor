@@ -109,7 +109,7 @@ static float bme680_temperature_offset_g = 0.0f;
  *  
  * @return       subscription result, zero when successful
  */
-static bsec_library_return_t bme680_bsec_update_subscription(float sample_rate)
+bsec_library_return_t bme680_bsec_update_subscription(float sample_rate)
 {
     /* Enable some desired virtual sensor, array size of requested_virtual_sensors to be provided */
     /* Intend to request four virtual sensors here, so giving the array size as 4, and thus */
@@ -165,7 +165,7 @@ void bsec_iot_init(float sample_rate, float temperature_offset, sensor_write bus
     bsec_library_return_t bsec_status = BSEC_OK;
     
     /* Fixed I2C configuration */
-    bme680_g.dev_addr = BME680_I2C_ADDR_PRIMARY;
+    bme680_g.dev_addr = BME680_I2C_ADDR_SECONDARY;
     bme680_g.interface = BME680_I2C_INTERFACE;
     /* User configurable I2C configuration */
     bme680_g.bme680_bus_write = bus_write;
@@ -193,7 +193,7 @@ void bsec_iot_init(float sample_rate, float temperature_offset, sensor_write bus
  *
  * @return      none
  */
-static void bme680_bsec_trigger_measurement(bsec_bme_settings_t *sensor_settings, sleep_fct sleep)
+void bme680_bsec_trigger_measurement(bsec_bme_settings_t *sensor_settings, sleep_fct sleep)
 {
     float t_ms = 0;
     u8 operation_mode = 0;
@@ -265,7 +265,7 @@ static void bme680_bsec_trigger_measurement(bsec_bme_settings_t *sensor_settings
  *
  * @return      none
  */
-static void bme680_bsec_read_data(int64_t time_stamp_trigger, bsec_input_t *inputs, uint8_t *num_bsec_inputs,
+void bme680_bsec_read_data(int64_t time_stamp_trigger, bsec_input_t *inputs, uint8_t *num_bsec_inputs,
     int32_t bsec_process_data)
 {
     static struct bme680_uncomp_field_data uncomp_data;
@@ -347,7 +347,7 @@ static void bme680_bsec_read_data(int64_t time_stamp_trigger, bsec_input_t *inpu
  *
  * @return      none
  */
-static void bme680_bsec_process_data(bsec_input_t *bsec_inputs, uint8_t num_bsec_inputs, output_ready_fct output_ready)
+void bme680_bsec_process_data(bsec_input_t *bsec_inputs, uint8_t num_bsec_inputs, output_ready_fct output_ready)
 {
     /* Output buffer set to the maximum virtual sensor outputs supported */
     bsec_output_t bsec_outputs[BSEC_NUMBER_OUTPUTS];

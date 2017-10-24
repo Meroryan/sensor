@@ -1,6 +1,9 @@
 --cpu=Cortex-M4.fp
 ".\_build\main.o"
+".\bosch\BSEC\algo\bin\ARM_CORTEX\ARMCC\IAQ_OUT\Cortex_M4F\libalgobsec.lib"
 ".\_build\bme680.o"
+".\_build\bme680_calculations.o"
+".\_build\bsec_integration.o"
 ".\_build\boards.o"
 ".\_build\ble_advdata.o"
 ".\_build\ble_conn_params.o"
