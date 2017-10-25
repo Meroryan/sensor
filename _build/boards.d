@@ -4,7 +4,7 @@
 .\_build\boards.o: .\nordic\h\nrf.h
 .\_build\boards.o: .\nordic\h\nrf52.h
 .\_build\boards.o: .\nordic\h\core_cm4.h
-.\_build\boards.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build\boards.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\boards.o: .\nordic\h\core_cmInstr.h
 .\_build\boards.o: .\nordic\h\cmsis_armcc.h
 .\_build\boards.o: .\nordic\h\core_cmFunc.h
@@ -18,12 +18,12 @@
 .\_build\boards.o: .\nordic\h\nrf52832_peripherals.h
 .\_build\boards.o: .\nordic\h\nrf_assert.h
 .\_build\boards.o: .\nordic\h\app_error.h
-.\_build\boards.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\_build\boards.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build\boards.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdio.h
+.\_build\boards.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\boards.o: .\nordic\h\sdk_errors.h
 .\_build\boards.o: .\nordic\h\nrf_error.h
-.\_build\boards.o: ..\sensor\sdk_config.h
+.\_build\boards.o: ..\iaq_timing_versuche\sdk_config.h
 .\_build\boards.o: .\nordic\h\nordic_common.h
 .\_build\boards.o: .\nordic\h\app_error_weak.h
-.\_build\boards.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\_build\boards.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdlib.h
 .\_build\boards.o: .\nordic\h\pca10040.h

@@ -1,10 +1,10 @@
 .\_build\ble_srv_common.o: nordic\c\ble_srv_common.c
 .\_build\ble_srv_common.o: .\nordic\h\ble_srv_common.h
-.\_build\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\_build\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build\ble_srv_common.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build\ble_srv_common.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\ble_srv_common.o: .\nordic\h\ble_types.h
 .\_build\ble_srv_common.o: .\nordic\h\app_util.h
-.\_build\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build\ble_srv_common.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\ble_srv_common.o: .\nordic\h\compiler_abstraction.h
 .\_build\ble_srv_common.o: .\nordic\h\nordic_common.h
 .\_build\ble_srv_common.o: .\nordic\h\nrf.h
@@ -28,9 +28,9 @@
 .\_build\ble_srv_common.o: .\nordic\h\ble_gatt.h
 .\_build\ble_srv_common.o: .\nordic\h\ble_gattc.h
 .\_build\ble_srv_common.o: .\nordic\h\ble_gatts.h
-.\_build\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\_build\ble_srv_common.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\string.h
 .\_build\ble_srv_common.o: .\nordic\h\app_error.h
-.\_build\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\_build\ble_srv_common.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\ble_srv_common.o: .\nordic\h\sdk_errors.h
-.\_build\ble_srv_common.o: ..\sensor\sdk_config.h
+.\_build\ble_srv_common.o: ..\iaq_timing_versuche\sdk_config.h
 .\_build\ble_srv_common.o: .\nordic\h\app_error_weak.h

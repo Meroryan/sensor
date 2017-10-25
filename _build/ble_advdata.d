@@ -1,8 +1,8 @@
 .\_build\ble_advdata.o: nordic\c\ble_advdata.c
 .\_build\ble_advdata.o: .\nordic\h\ble_advdata.h
-.\_build\ble_advdata.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\_build\ble_advdata.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\_build\ble_advdata.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\_build\ble_advdata.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build\ble_advdata.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build\ble_advdata.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\string.h
 .\_build\ble_advdata.o: .\nordic\h\ble.h
 .\_build\ble_advdata.o: .\nordic\h\ble_ranges.h
 .\_build\ble_advdata.o: .\nordic\h\ble_types.h
@@ -27,11 +27,11 @@
 .\_build\ble_advdata.o: .\nordic\h\compiler_abstraction.h
 .\_build\ble_advdata.o: .\nordic\h\ble_gatts.h
 .\_build\ble_advdata.o: .\nordic\h\app_util.h
-.\_build\ble_advdata.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build\ble_advdata.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\ble_advdata.o: .\nordic\h\nordic_common.h
 .\_build\ble_advdata.o: .\nordic\h\ble_srv_common.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_common.h
-.\_build\ble_advdata.o: ..\sensor\sdk_config.h
+.\_build\ble_advdata.o: ..\iaq_timing_versuche\sdk_config.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_os.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_errors.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_macros.h

@@ -503,18 +503,18 @@ braries\usbd\class\msc -I..\..\..\..\..\..\components\libraries\usbd\config -I.
 evice\common -I..\..\..\..\..\..\components\softdevice\s132\headers -I..\..\..\
 ..\..\..\components\softdevice\s132\headers\nrf52 -I..\..\..\..\..\..\component
 s\toolchain -I..\..\..\..\..\..\external\fprintf -I..\..\..\..\..\..\external\s
-egger_rtt -I..\config -I.\RTE\_nrf52832_xxaa -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.
-5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPac
-k\8.14.1\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_
-VERSION SETA 524" --predefine="_RTE_ SETA 1" --predefine="NRF52 SETA 1" --prede
-fine="BOARD_PCA10040 SETA 1" --predefine="CONFIG_GPIO_AS_PINRESET SETA 1" --pre
-define="NRF52 SETA 1" --predefine="NRF52832_XXAA SETA 1" --predefine="NRF52_PAN
-_74 SETA 1" --predefine="NRF_SD_BLE_API_VERSION SETA 5" --predefine="S132 SETA 
-1" --predefine="SOFTDEVICE_PRESENT SETA 1" --predefine="SWI_DISABLE0 SETA 1" --
-cpreproc_opts=-DBOARD_PCA10040,-DCONFIG_GPIO_AS_PINRESET,-DNRF52,-DNRF52832_XXA
-A,-DNRF52_PAN_74,-DNRF_SD_BLE_API_VERSION=5,-DS132,-DSOFTDEVICE_PRESENT,-DSWI_D
-ISABLE0 --list=.\_build\arm_startup_nrf52.lst RTE\Device\nRF52832_xxAA\arm_star
-tup_nrf52.s
+egger_rtt -I..\config -IC:\SWProjekte\ET_Tools\trunk\test\sensor\branches\iaq_t
+iming_versuche\RTE -IC:\PRG\KEIL_521\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include -IC
+:\PRG\KEIL_521\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\
+Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 521
+" --predefine="_RTE_ SETA 1" --predefine="NRF52 SETA 1" --predefine="BOARD_PCA1
+0040 SETA 1" --predefine="CONFIG_GPIO_AS_PINRESET SETA 1" --predefine="NRF52 SE
+TA 1" --predefine="NRF52832_XXAA SETA 1" --predefine="NRF52_PAN_74 SETA 1" --pr
+edefine="NRF_SD_BLE_API_VERSION SETA 5" --predefine="S132 SETA 1" --predefine="
+SOFTDEVICE_PRESENT SETA 1" --predefine="SWI_DISABLE0 SETA 1" --cpreproc_opts=-D
+BOARD_PCA10040,-DCONFIG_GPIO_AS_PINRESET,-DNRF52,-DNRF52832_XXAA,-DNRF52_PAN_74
+,-DNRF_SD_BLE_API_VERSION=5,-DS132,-DSOFTDEVICE_PRESENT,-DSWI_DISABLE0 --list=.
+\_build\arm_startup_nrf52.lst RTE\Device\nRF52832_xxAA\arm_startup_nrf52.s
 
 
 

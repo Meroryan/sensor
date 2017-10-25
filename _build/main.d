@@ -1,6 +1,6 @@
 .\_build\main.o: main.c
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\_build\main.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build\main.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\string.h
 .\_build\main.o: .\nordic\h\nordic_common.h
 .\_build\main.o: .\nordic\h\nrf.h
 .\_build\main.o: .\nordic\h\nrf52.h
@@ -15,11 +15,11 @@
 .\_build\main.o: .\nordic\h\nrf52_name_change.h
 .\_build\main.o: .\nordic\h\compiler_abstraction.h
 .\_build\main.o: .\nordic\h\app_error.h
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build\main.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdio.h
+.\_build\main.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\main.o: .\nordic\h\sdk_errors.h
 .\_build\main.o: .\nordic\h\nrf_error.h
-.\_build\main.o: ..\sensor\sdk_config.h
+.\_build\main.o: ..\iaq_timing_versuche\sdk_config.h
 .\_build\main.o: .\nordic\h\app_error_weak.h
 .\_build\main.o: .\nordic\h\ble.h
 .\_build\main.o: .\nordic\h\ble_ranges.h
@@ -34,7 +34,7 @@
 .\_build\main.o: .\nordic\h\ble_hci.h
 .\_build\main.o: .\nordic\h\ble_srv_common.h
 .\_build\main.o: .\nordic\h\app_util.h
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build\main.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\main.o: .\nordic\h\ble_advdata.h
 .\_build\main.o: .\nordic\h\ble_conn_params.h
 .\_build\main.o: .\nordic\h\nrf_sdh.h
@@ -46,7 +46,7 @@
 .\_build\main.o: .\nordic\h\nrf_gpio.h
 .\_build\main.o: .\nordic\h\nrf_peripherals.h
 .\_build\main.o: .\nordic\h\nrf52832_peripherals.h
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\_build\main.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdlib.h
 .\_build\main.o: .\nordic\h\pca10040.h
 .\_build\main.o: .\nordic\h\app_timer.h
 .\_build\main.o: .\nordic\h\app_button.h
@@ -71,7 +71,7 @@
 .\_build\main.o: .\nordic\h\nrf_drv_twi.h
 .\_build\main.o: .\nordic\h\nrf_twi.h
 .\_build\main.o: .\nordic\h\nrf_twim.h
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\_build\main.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\math.h
 .\_build\main.o: .\bosch\BSEC\algo\bsec_interface.h
 .\_build\main.o: .\bosch\BSEC\algo\bsec_datatypes.h
 .\_build\main.o: .\bosch\BSEC\example\bsec_integration.h

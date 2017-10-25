@@ -78,7 +78,7 @@
 #define TWI_INSTANCE_ID   0
 #define BME680_ADDR       0x77U
 #define MAX44009_ADDR			0x4AU
-#define MEIN_TIMER_INTERVAL         APP_TIMER_TICKS(60000)              // 20s
+#define MEIN_TIMER_INTERVAL         APP_TIMER_TICKS(300000)              // 3000s
 
 static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);
 APP_TIMER_DEF(m_mein_timer_id);
@@ -88,6 +88,11 @@ static ble_advdata_t advdata;
 uint16_t meas_period;
 uint8_t max44009_data[8]	= {0};
 uint64_t	system_time			=	0;
+float		bme680_temp		=	0;
+float		bme680_press	=	0;
+float		bme680_humi		=	0;
+float		bme680_iaq		=	0;
+uint8_t	bme680_iaq_acc	=	0;
 
 /* Timestamp variables */
 int64_t time_stamp = 0;
@@ -598,9 +603,7 @@ static void mein_timer_timeout_handler(void * p_context)
 		bme680_bsec_read_data(time_stamp, bsec_inputs, &num_bsec_inputs, sensor_settings.process_data);
 		
 		/* Time to invoke BSEC to perform the actual processing */
-		bme680_bsec_process_data(bsec_inputs, num_bsec_inputs, output_ready);
-		
-		
+		bme680_bsec_process_data(bsec_inputs, num_bsec_inputs, output_ready);	
 		
 		/* Compute how long we can sleep until we need to call bsec_sensor_control() next */
 		/* Time_stamp is converted from microseconds to nanoseconds first and then the difference to milliseconds */
@@ -610,10 +613,10 @@ static void mein_timer_timeout_handler(void * p_context)
 //		batt 		= batt_read();						// Ergebnis in batt_val
 //		feuchte	=	feuchte_read();					// Ergebnis in feuchte_val
 		
-//		temp			= (bme680_data.temperature / 10);
-//		humi			=	(bme680_data.humidity / 100);
-//		press 		= (bme680_data.pressure / 100);
-		quali			= 0; 		// kommt später ;-)
+		temp			= (bme680_temp / 10);
+		humi			=	(bme680_humi / 100);
+		press 		= (bme680_press / 100);
+		quali			= (uint16_t)bme680_iaq;
 		illu			= calc_lux(max44009_data);
 		feuchte		=	0;		// kommt später
 		batt			= 0;		// kommt später
@@ -637,7 +640,6 @@ static void mein_timer_timeout_handler(void * p_context)
 		sprintf(str_buff, "%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
 			bit_container[0],bit_container[1],bit_container[2],bit_container[3],bit_container[4],
 			bit_container[5],bit_container[6],bit_container[7],bit_container[8],bit_container[9]);
-
 		
 		err_code = sd_ble_gap_device_name_set(&sec_mode, str_buff, strlen(str_buff));
 		APP_ERROR_CHECK(err_code);
@@ -779,8 +781,10 @@ int64_t get_timestamp_us(void)
 void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy, float temperature, float humidity,
      float pressure, float raw_temperature, float raw_humidity, float gas, bsec_library_return_t bsec_status)
 {
-    // ...
-    // Please insert system specific code to further process or display the BSEC outputs
-    // ...
+		bme680_temp			=	temperature;
+		bme680_press		=	pressure;
+		bme680_humi			=	humidity;
+		bme680_iaq			=	iaq;
+		bme680_iaq_acc	=	iaq_accuracy;
 }
 

@@ -1,9 +1,9 @@
 .\_build\nrf_atfifo.o: nordic\c\nrf_atfifo.c
-.\_build\nrf_atfifo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\_build\nrf_atfifo.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\string.h
 .\_build\nrf_atfifo.o: .\nordic\h\app_util.h
-.\_build\nrf_atfifo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\_build\nrf_atfifo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\_build\nrf_atfifo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build\nrf_atfifo.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build\nrf_atfifo.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build\nrf_atfifo.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\nrf_atfifo.o: .\nordic\h\compiler_abstraction.h
 .\_build\nrf_atfifo.o: .\nordic\h\nordic_common.h
 .\_build\nrf_atfifo.o: .\nordic\h\nrf.h
@@ -20,9 +20,9 @@
 .\_build\nrf_atfifo.o: .\nordic\h\nrf_atfifo.h
 .\_build\nrf_atfifo.o: .\nordic\h\nrf_assert.h
 .\_build\nrf_atfifo.o: .\nordic\h\app_error.h
-.\_build\nrf_atfifo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\_build\nrf_atfifo.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\nrf_atfifo.o: .\nordic\h\sdk_errors.h
 .\_build\nrf_atfifo.o: .\nordic\h\nrf_error.h
-.\_build\nrf_atfifo.o: ..\sensor\sdk_config.h
+.\_build\nrf_atfifo.o: ..\iaq_timing_versuche\sdk_config.h
 .\_build\nrf_atfifo.o: .\nordic\h\app_error_weak.h
 .\_build\nrf_atfifo.o: .\nordic\h\nrf_atfifo_internal.h

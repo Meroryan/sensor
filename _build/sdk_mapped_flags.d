@@ -1,9 +1,9 @@
 .\_build\sdk_mapped_flags.o: nordic\c\sdk_mapped_flags.c
 .\_build\sdk_mapped_flags.o: .\nordic\h\sdk_mapped_flags.h
-.\_build\sdk_mapped_flags.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\_build\sdk_mapped_flags.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build\sdk_mapped_flags.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build\sdk_mapped_flags.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\sdk_mapped_flags.o: .\nordic\h\app_util.h
-.\_build\sdk_mapped_flags.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build\sdk_mapped_flags.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\sdk_mapped_flags.o: .\nordic\h\compiler_abstraction.h
 .\_build\sdk_mapped_flags.o: .\nordic\h\nordic_common.h
 .\_build\sdk_mapped_flags.o: .\nordic\h\nrf.h

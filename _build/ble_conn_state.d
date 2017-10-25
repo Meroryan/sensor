@@ -1,7 +1,7 @@
 .\_build\ble_conn_state.o: nordic\c\ble_conn_state.c
 .\_build\ble_conn_state.o: .\nordic\h\ble_conn_state.h
-.\_build\ble_conn_state.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\_build\ble_conn_state.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build\ble_conn_state.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build\ble_conn_state.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\ble_conn_state.o: .\nordic\h\ble.h
 .\_build\ble_conn_state.o: .\nordic\h\ble_ranges.h
 .\_build\ble_conn_state.o: .\nordic\h\ble_types.h
@@ -27,13 +27,13 @@
 .\_build\ble_conn_state.o: .\nordic\h\ble_gatts.h
 .\_build\ble_conn_state.o: .\nordic\h\sdk_mapped_flags.h
 .\_build\ble_conn_state.o: .\nordic\h\app_util.h
-.\_build\ble_conn_state.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build\ble_conn_state.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\ble_conn_state.o: .\nordic\h\nordic_common.h
-.\_build\ble_conn_state.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\_build\ble_conn_state.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\string.h
 .\_build\ble_conn_state.o: .\nordic\h\app_error.h
-.\_build\ble_conn_state.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\_build\ble_conn_state.o: C:\PRG\KEIL_521\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\ble_conn_state.o: .\nordic\h\sdk_errors.h
-.\_build\ble_conn_state.o: ..\sensor\sdk_config.h
+.\_build\ble_conn_state.o: ..\iaq_timing_versuche\sdk_config.h
 .\_build\ble_conn_state.o: .\nordic\h\app_error_weak.h
 .\_build\ble_conn_state.o: .\nordic\h\nrf_sdh_ble.h
 .\_build\ble_conn_state.o: .\nordic\h\nrf_section_iter.h
