@@ -10,8 +10,7 @@
       <TargetName>nrf52832_xxaa</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
@@ -336,7 +335,7 @@
               <MiscControls>--reduce_paths</MiscControls>
               <Define>BOARD_PCA10040 CONFIG_GPIO_AS_PINRESET NRF52 NRF52832_XXAA NRF52_PAN_74 NRF_SD_BLE_API_VERSION=5 S132 SOFTDEVICE_PRESENT SWI_DISABLE0</Define>
               <Undefine></Undefine>
-              <IncludePath>..\sensor;.\nordic\h;.\bosch\BSEC\algo;.\bosch\BSEC\API;.\bosch\BSEC\example</IncludePath>
+              <IncludePath>..\sensor;.\nordic\h;.\bosch\BSEC\algo;.\bosch\BSEC\API;.\bosch\BSEC\example;..\iaq_timing_versuche</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2670,7 +2669,6 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>

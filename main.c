@@ -613,9 +613,9 @@ static void mein_timer_timeout_handler(void * p_context)
 //		batt 		= batt_read();						// Ergebnis in batt_val
 //		feuchte	=	feuchte_read();					// Ergebnis in feuchte_val
 		
-		temp			= (bme680_temp / 10);
-		humi			=	(bme680_humi / 100);
-		press 		= (bme680_press / 100);
+		temp			= (int64_t)(bme680_temp / 10);
+		humi			=	(uint32_t)(bme680_humi / 100);
+		press 		= (uint32_t)(bme680_press / 100);
 		quali			= (uint16_t)bme680_iaq;
 		illu			= calc_lux(max44009_data);
 		feuchte		=	0;		// kommt später
