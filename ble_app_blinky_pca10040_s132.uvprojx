@@ -11,6 +11,7 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
@@ -335,7 +336,7 @@
               <MiscControls>--reduce_paths</MiscControls>
               <Define>BOARD_PCA10040 CONFIG_GPIO_AS_PINRESET NRF52 NRF52832_XXAA NRF52_PAN_74 NRF_SD_BLE_API_VERSION=5 S132 SOFTDEVICE_PRESENT SWI_DISABLE0</Define>
               <Undefine></Undefine>
-              <IncludePath>..\sensor;.\nordic\h;.\bosch\API</IncludePath>
+              <IncludePath>..\sensor;..\trunk;.\nordic\h;.\bosch\BSEC\algo;.\bosch\BSEC\API;.\bosch\BSEC\example</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -390,9 +391,24 @@
               <FilePath>sdk_config.h</FilePath>
             </File>
             <File>
+              <FileName>libalgobsec.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\bosch\BSEC\algo\bin\ARM_CORTEX\ARMCC\IAQ_OUT\Cortex_M4F\libalgobsec.lib</FilePath>
+            </File>
+            <File>
               <FileName>bme680.c</FileName>
               <FileType>1</FileType>
-              <FilePath>bosch\API\bme680.c</FilePath>
+              <FilePath>.\bosch\BSEC\API\bme680.c</FilePath>
+            </File>
+            <File>
+              <FileName>bme680_calculations.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bosch\BSEC\API\bme680_calculations.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsec_integration.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bosch\BSEC\example\bsec_integration.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2654,6 +2670,7 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
@@ -3033,9 +3050,24 @@
               <FilePath>sdk_config.h</FilePath>
             </File>
             <File>
+              <FileName>libalgobsec.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\bosch\BSEC\algo\bin\ARM_CORTEX\ARMCC\IAQ_OUT\Cortex_M4F\libalgobsec.lib</FilePath>
+            </File>
+            <File>
               <FileName>bme680.c</FileName>
               <FileType>1</FileType>
-              <FilePath>bosch\API\bme680.c</FilePath>
+              <FilePath>.\bosch\BSEC\API\bme680.c</FilePath>
+            </File>
+            <File>
+              <FileName>bme680_calculations.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bosch\BSEC\API\bme680_calculations.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsec_integration.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bosch\BSEC\example\bsec_integration.c</FilePath>
             </File>
           </Files>
         </Group>

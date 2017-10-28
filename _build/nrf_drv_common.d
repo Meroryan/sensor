@@ -17,7 +17,7 @@
 .\_build\nrf_drv_common.o: .\nordic\h\compiler_abstraction.h
 .\_build\nrf_drv_common.o: .\nordic\h\sdk_errors.h
 .\_build\nrf_drv_common.o: .\nordic\h\nrf_error.h
-.\_build\nrf_drv_common.o: ..\sensor\sdk_config.h
+.\_build\nrf_drv_common.o: ..\trunk\sdk_config.h
 .\_build\nrf_drv_common.o: .\nordic\h\sdk_common.h
 .\_build\nrf_drv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\_build\nrf_drv_common.o: .\nordic\h\nordic_common.h

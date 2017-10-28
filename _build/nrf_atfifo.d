@@ -23,6 +23,6 @@
 .\_build\nrf_atfifo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\nrf_atfifo.o: .\nordic\h\sdk_errors.h
 .\_build\nrf_atfifo.o: .\nordic\h\nrf_error.h
-.\_build\nrf_atfifo.o: ..\sensor\sdk_config.h
+.\_build\nrf_atfifo.o: ..\trunk\sdk_config.h
 .\_build\nrf_atfifo.o: .\nordic\h\app_error_weak.h
 .\_build\nrf_atfifo.o: .\nordic\h\nrf_atfifo_internal.h

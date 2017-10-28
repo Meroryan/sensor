@@ -4,7 +4,7 @@
 .\_build\nrf_memobj.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\_build\nrf_memobj.o: .\nordic\h\sdk_errors.h
 .\_build\nrf_memobj.o: .\nordic\h\nrf_error.h
-.\_build\nrf_memobj.o: ..\sensor\sdk_config.h
+.\_build\nrf_memobj.o: ..\trunk\sdk_config.h
 .\_build\nrf_memobj.o: .\nordic\h\nrf_balloc.h
 .\_build\nrf_memobj.o: .\nordic\h\app_util_platform.h
 .\_build\nrf_memobj.o: .\nordic\h\compiler_abstraction.h

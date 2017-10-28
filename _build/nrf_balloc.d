@@ -3,7 +3,7 @@
 .\_build\nrf_balloc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\nrf_balloc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\nrf_balloc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\_build\nrf_balloc.o: ..\sensor\sdk_config.h
+.\_build\nrf_balloc.o: ..\trunk\sdk_config.h
 .\_build\nrf_balloc.o: .\nordic\h\nordic_common.h
 .\_build\nrf_balloc.o: .\nordic\h\compiler_abstraction.h
 .\_build\nrf_balloc.o: .\nordic\h\sdk_os.h
@@ -35,4 +35,5 @@
 .\_build\nrf_balloc.o: .\nordic\h\app_error_weak.h
 .\_build\nrf_balloc.o: .\nordic\h\nrf_log.h
 .\_build\nrf_balloc.o: .\nordic\h\nrf_section.h
+.\_build\nrf_balloc.o: .\nordic\h\nrf_strerror.h
 .\_build\nrf_balloc.o: .\nordic\h\nrf_log_internal.h

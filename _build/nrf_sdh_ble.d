@@ -3,7 +3,7 @@
 .\_build\nrf_sdh_ble.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\nrf_sdh_ble.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\nrf_sdh_ble.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\_build\nrf_sdh_ble.o: ..\sensor\sdk_config.h
+.\_build\nrf_sdh_ble.o: ..\trunk\sdk_config.h
 .\_build\nrf_sdh_ble.o: .\nordic\h\nordic_common.h
 .\_build\nrf_sdh_ble.o: .\nordic\h\compiler_abstraction.h
 .\_build\nrf_sdh_ble.o: .\nordic\h\sdk_os.h

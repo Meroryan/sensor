@@ -3,7 +3,7 @@
 .\_build\hardfault_implementation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\hardfault_implementation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\hardfault_implementation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\_build\hardfault_implementation.o: ..\sensor\sdk_config.h
+.\_build\hardfault_implementation.o: ..\trunk\sdk_config.h
 .\_build\hardfault_implementation.o: .\nordic\h\nordic_common.h
 .\_build\hardfault_implementation.o: .\nordic\h\compiler_abstraction.h
 .\_build\hardfault_implementation.o: .\nordic\h\sdk_os.h

@@ -19,7 +19,7 @@
 .\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\main.o: .\nordic\h\sdk_errors.h
 .\_build\main.o: .\nordic\h\nrf_error.h
-.\_build\main.o: ..\sensor\sdk_config.h
+.\_build\main.o: ..\trunk\sdk_config.h
 .\_build\main.o: .\nordic\h\app_error_weak.h
 .\_build\main.o: .\nordic\h\ble.h
 .\_build\main.o: .\nordic\h\ble_ranges.h
@@ -56,6 +56,7 @@
 .\_build\main.o: .\nordic\h\sdk_common.h
 .\_build\main.o: .\nordic\h\sdk_os.h
 .\_build\main.o: .\nordic\h\sdk_macros.h
+.\_build\main.o: .\nordic\h\nrf_strerror.h
 .\_build\main.o: .\nordic\h\nrf_log_internal.h
 .\_build\main.o: .\nordic\h\nrf_log_ctrl.h
 .\_build\main.o: .\nordic\h\nrf_log_ctrl_internal.h
@@ -71,6 +72,9 @@
 .\_build\main.o: .\nordic\h\nrf_drv_twi.h
 .\_build\main.o: .\nordic\h\nrf_twi.h
 .\_build\main.o: .\nordic\h\nrf_twim.h
-.\_build\main.o: .\bosch\API\bme680.h
-.\_build\main.o: .\bosch\API\bme680_defs.h
+.\_build\main.o: .\bosch\BSEC\algo\bsec_interface.h
+.\_build\main.o: .\bosch\BSEC\algo\bsec_datatypes.h
+.\_build\main.o: .\bosch\BSEC\example\bsec_integration.h
+.\_build\main.o: .\bosch\BSEC\API\bme680.h
+.\_build\main.o: .\bosch\BSEC\API\sensor_api_common_types.h
 .\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

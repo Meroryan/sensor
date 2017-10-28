@@ -31,7 +31,7 @@
 .\_build\ble_advdata.o: .\nordic\h\nordic_common.h
 .\_build\ble_advdata.o: .\nordic\h\ble_srv_common.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_common.h
-.\_build\ble_advdata.o: ..\sensor\sdk_config.h
+.\_build\ble_advdata.o: ..\trunk\sdk_config.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_os.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_errors.h
 .\_build\ble_advdata.o: .\nordic\h\sdk_macros.h

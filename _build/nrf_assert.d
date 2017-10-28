@@ -18,6 +18,6 @@
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\nrf_assert.o: .\nordic\h\sdk_errors.h
 .\_build\nrf_assert.o: .\nordic\h\nrf_error.h
-.\_build\nrf_assert.o: ..\sensor\sdk_config.h
+.\_build\nrf_assert.o: ..\trunk\sdk_config.h
 .\_build\nrf_assert.o: .\nordic\h\nordic_common.h
 .\_build\nrf_assert.o: .\nordic\h\app_error_weak.h

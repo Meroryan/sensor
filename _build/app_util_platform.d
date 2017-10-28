@@ -23,6 +23,6 @@
 .\_build\app_util_platform.o: .\nordic\h\app_error.h
 .\_build\app_util_platform.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\app_util_platform.o: .\nordic\h\sdk_errors.h
-.\_build\app_util_platform.o: ..\sensor\sdk_config.h
+.\_build\app_util_platform.o: ..\trunk\sdk_config.h
 .\_build\app_util_platform.o: .\nordic\h\nordic_common.h
 .\_build\app_util_platform.o: .\nordic\h\app_error_weak.h

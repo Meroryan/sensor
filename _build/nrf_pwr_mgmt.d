@@ -3,7 +3,7 @@
 .\_build\nrf_pwr_mgmt.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\nrf_pwr_mgmt.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\nrf_pwr_mgmt.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\_build\nrf_pwr_mgmt.o: ..\sensor\sdk_config.h
+.\_build\nrf_pwr_mgmt.o: ..\trunk\sdk_config.h
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\nordic_common.h
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\compiler_abstraction.h
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\sdk_os.h
@@ -46,5 +46,6 @@
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\nrf_error_soc.h
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\nrf_nvic.h
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\nrf_log.h
+.\_build\nrf_pwr_mgmt.o: .\nordic\h\nrf_strerror.h
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\nrf_log_internal.h
 .\_build\nrf_pwr_mgmt.o: .\nordic\h\nrf_sdh.h

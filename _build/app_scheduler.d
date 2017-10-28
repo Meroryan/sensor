@@ -3,7 +3,7 @@
 .\_build\app_scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\app_scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\app_scheduler.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\_build\app_scheduler.o: ..\sensor\sdk_config.h
+.\_build\app_scheduler.o: ..\trunk\sdk_config.h
 .\_build\app_scheduler.o: .\nordic\h\nordic_common.h
 .\_build\app_scheduler.o: .\nordic\h\compiler_abstraction.h
 .\_build\app_scheduler.o: .\nordic\h\sdk_os.h

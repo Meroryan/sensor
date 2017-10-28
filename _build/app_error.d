@@ -17,6 +17,6 @@
 .\_build\app_error.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\app_error.o: .\nordic\h\sdk_errors.h
 .\_build\app_error.o: .\nordic\h\nrf_error.h
-.\_build\app_error.o: ..\sensor\sdk_config.h
+.\_build\app_error.o: ..\trunk\sdk_config.h
 .\_build\app_error.o: .\nordic\h\nordic_common.h
 .\_build\app_error.o: .\nordic\h\app_error_weak.h

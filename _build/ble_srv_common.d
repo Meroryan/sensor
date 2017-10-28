@@ -32,5 +32,5 @@
 .\_build\ble_srv_common.o: .\nordic\h\app_error.h
 .\_build\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\ble_srv_common.o: .\nordic\h\sdk_errors.h
-.\_build\ble_srv_common.o: ..\sensor\sdk_config.h
+.\_build\ble_srv_common.o: ..\trunk\sdk_config.h
 .\_build\ble_srv_common.o: .\nordic\h\app_error_weak.h

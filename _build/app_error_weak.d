@@ -17,7 +17,7 @@
 .\_build\app_error_weak.o: .\nordic\h\compiler_abstraction.h
 .\_build\app_error_weak.o: .\nordic\h\sdk_errors.h
 .\_build\app_error_weak.o: .\nordic\h\nrf_error.h
-.\_build\app_error_weak.o: ..\sensor\sdk_config.h
+.\_build\app_error_weak.o: ..\trunk\sdk_config.h
 .\_build\app_error_weak.o: .\nordic\h\nordic_common.h
 .\_build\app_error_weak.o: .\nordic\h\app_error_weak.h
 .\_build\app_error_weak.o: .\nordic\h\nrf_log.h
@@ -28,6 +28,7 @@
 .\_build\app_error_weak.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\app_error_weak.o: .\nordic\h\sdk_macros.h
 .\_build\app_error_weak.o: .\nordic\h\nrf_section.h
+.\_build\app_error_weak.o: .\nordic\h\nrf_strerror.h
 .\_build\app_error_weak.o: .\nordic\h\nrf_log_internal.h
 .\_build\app_error_weak.o: .\nordic\h\nrf_log_ctrl.h
 .\_build\app_error_weak.o: .\nordic\h\nrf_log_ctrl_internal.h

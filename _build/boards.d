@@ -22,7 +22,7 @@
 .\_build\boards.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\boards.o: .\nordic\h\sdk_errors.h
 .\_build\boards.o: .\nordic\h\nrf_error.h
-.\_build\boards.o: ..\sensor\sdk_config.h
+.\_build\boards.o: ..\trunk\sdk_config.h
 .\_build\boards.o: .\nordic\h\nordic_common.h
 .\_build\boards.o: .\nordic\h\app_error_weak.h
 .\_build\boards.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

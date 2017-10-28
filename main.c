@@ -69,7 +69,9 @@
 #include "nrf_delay.h"
 #include "nrf_gpio.h"
 #include "nrf_drv_twi.h"
-#include "bme680.h"
+#include "bsec_interface.h"
+#include "bsec_datatypes.h"
+#include "bsec_integration.h"
 #include "math.h"
 
 
@@ -82,29 +84,31 @@
 #define BME680_EN_PIN			4
 #define MEIN_TIMER_INTERVAL         APP_TIMER_TICKS(60000)              // 20s
 
-static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);
-APP_TIMER_DEF(m_mein_timer_id);
-volatile uint8_t TransferPending = 0;
-static uint8_t m_sample;
-struct bme680_field_data bme680_data;
 static ble_advdata_t advdata;
-struct bme680_dev gas_sensor;
-uint16_t meas_period;
+static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);
+APP_TIMER_DEF(m_sleep_timer_id);
 uint8_t max44009_data[8]	= {0};
+uint8_t	sleep_timer_state	= 0;
+uint64_t	system_time			=	0;
+uint16_t	bme680_temp_offset	= 0;
+uint32_t	bme680_press				= 0;
+uint32_t	bme680_humi					= 0;
+uint16_t	bme680_quali				= 0;
+uint32_t	max44009_illu				= 0;
+uint8_t		ble_batt						= 0;
+uint16_t	feuchte			= 0;
 
-void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context);
+
 void twi_init (void);
-void gpio_init(void);
-void bme680_read(void);
-void user_delay_ms(uint32_t period);
-int8_t user_i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len);
-int8_t user_i2c_write(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len);
-__STATIC_INLINE void data_handler(uint8_t temp);
-static void mein_timer_timeout_handler(void * p_context);
-static void application_timers_start(void);
-void bme680_setup(void);
+int8_t bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len);
+int8_t bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len);
+static void sleep_timer_timeout_handler(void * p_context);
+static void application_timers_start(uint32_t time);
 void max44009_read(void);
 uint32_t calc_lux(uint8_t *data);
+void sleep(uint32_t t_ms);
+int64_t get_timestamp_us(void);
+void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy, float temperature, float humidity, float pressure, float raw_temperature, float raw_humidity, float gas, bsec_library_return_t bsec_status);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -171,9 +175,9 @@ static void timers_init(void)
 	ret_code_t err_code = app_timer_init();
 	APP_ERROR_CHECK(err_code);
 	
-	err_code = app_timer_create(&m_mein_timer_id,
-                                APP_TIMER_MODE_REPEATED,
-                                mein_timer_timeout_handler);
+	err_code = app_timer_create(&m_sleep_timer_id,
+                                APP_TIMER_MODE_SINGLE_SHOT,
+                                sleep_timer_timeout_handler);
 	APP_ERROR_CHECK(err_code);
 }
 
@@ -528,9 +532,21 @@ NVIC_ClearPendingIRQ(FPU_IRQn);
  */
 int main(void)
 {
+		uint32_t  err_code;
+    int64_t time_stamp = 0;
+//    int64_t time_stamp_trigger = 0;
+    int64_t time_stamp_interval_ms = 0;    
+    bsec_input_t bsec_inputs[5];    
+    uint8_t num_bsec_inputs = 0;    
+    bsec_bme_settings_t sensor_settings;    
+    bsec_library_return_t bsec_status = BSEC_OK;
+		uint8_t		bit_container[11]	=	{0};
+		char			str_buff[25]			=	{0};
+		ble_gap_conn_sec_mode_t sec_mode;
+		BLE_GAP_CONN_SEC_MODE_SET_OPEN(&sec_mode);
     // Initialize.
     timers_init();
- //   log_init();
+    log_init();
 		twi_init();
     ble_stack_init();
     gap_params_init();
@@ -538,81 +554,62 @@ int main(void)
     services_init();
     advertising_init();
     conn_params_init();
-		bme680_setup();
 
     // Start execution.
     NRF_LOG_INFO("Blinky example started.");
-		application_timers_start();
+    bsec_iot_init(BSEC_SAMPLE_RATE_ULP, 0.0f, bus_write, bus_read, sleep);
 
     // Enter main loop.
     for (;;)
     {
-        if (NRF_LOG_PROCESS() == false)
-        {		
-            power_manage();
+        time_stamp = get_timestamp_us() * 1000;
+        bsec_status = bsec_sensor_control(time_stamp, &sensor_settings);
+        bme680_bsec_trigger_measurement(&sensor_settings, sleep);
+        num_bsec_inputs = 0;
+        bme680_bsec_read_data(time_stamp, bsec_inputs, &num_bsec_inputs, sensor_settings.process_data);
+        bme680_bsec_process_data(bsec_inputs, num_bsec_inputs, output_ready);
+        time_stamp_interval_ms = (sensor_settings.next_call - get_timestamp_us() * 1000) / 1000000;
+				
+				max44009_read();											// Ergebnis in max44009_data[]
+				max44009_illu			= calc_lux(max44009_data);
+			
+				bit_container[0]	= (uint8_t)(bme680_temp_offset >> 3);
+				bit_container[1]	= (uint8_t)(((bme680_temp_offset & 0x07) << 5) | ((bme680_humi >> 5) & 0x1F));
+				bit_container[2]	= (uint8_t)(((bme680_humi & 0x1F) << 3) | ((bme680_press >> 11) & 0x07));
+				bit_container[3]	= (uint8_t)((bme680_press >> 3) & 0xFF);
+				bit_container[4]	= (uint8_t)(((bme680_press & 0x07) << 5) | ((bme680_quali >> 4) & 0x1F));
+				bit_container[5]	= (uint8_t)(((bme680_quali & 0x0F) << 4) | ((max44009_illu >> 14) & 0x0F));
+				bit_container[6]	= (uint8_t)((max44009_illu >> 6) & 0xFF);
+				bit_container[7]	= (uint8_t)(((max44009_illu & 0x3f) << 2) | ((feuchte >> 14) & 0x03));
+				bit_container[8]	= (uint8_t)((feuchte >> 6) & 0xFF);
+				bit_container[9]	= (uint8_t)(((feuchte & 0x3F) << 2) | (ble_batt & 0x03));
+
+				sprintf(str_buff, "%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+					bit_container[0],bit_container[1],bit_container[2],bit_container[3],bit_container[4],
+					bit_container[5],bit_container[6],bit_container[7],bit_container[8],bit_container[9]);
+
+				err_code = sd_ble_gap_device_name_set(&sec_mode, str_buff, strlen(str_buff));
+				APP_ERROR_CHECK(err_code);
+
+				err_code = ble_advdata_set(&advdata, NULL);
+				APP_ERROR_CHECK(err_code);
+				advertising_start();			
+			
+				while ( NRF_LOG_PROCESS() != false ) {}	// debug infos senden
+					
+        if (time_stamp_interval_ms > 0)
+        {
+            sleep((uint32_t)time_stamp_interval_ms);
         }
     }
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static void mein_timer_timeout_handler(void * p_context)
+static void sleep_timer_timeout_handler(void * p_context)
 {
 		UNUSED_PARAMETER(p_context);
-		ble_gap_conn_sec_mode_t sec_mode;
-		BLE_GAP_CONN_SEC_MODE_SET_OPEN(&sec_mode);
-		uint32_t  err_code;
-		int16_t		temp				= 0;
-		uint16_t	temp_offset	= 0;
-		uint32_t	press				= 0;
-		uint32_t	humi				= 0;
-		uint16_t	quali				= 0;
-		uint32_t	illu				= 0;
-		uint8_t		batt				= 0;
-		uint16_t	feuchte			= 0;
-		uint8_t		bit_container[11]	=	{0};
-		char			str_buff[25]			=	{0};
-
-		bme680_read();												// Ergebnis in bme680_data
-		max44009_read();											// Ergebnis in max44009_data[]
-//		batt 		= batt_read();						// Ergebnis in batt_val
-//		feuchte	=	feuchte_read();					// Ergebnis in feuchte_val
-		
-		temp			= (bme680_data.temperature / 10);
-		humi			=	(bme680_data.humidity / 100);
-		press 		= (bme680_data.pressure / 100);
-		quali			= 0; 		// kommt später ;-)
-		illu			= calc_lux(max44009_data);
-		feuchte		=	0;		// kommt später
-		batt			= 0;		// kommt später
-
-		if ( temp <= -500 )	{ temp = -500;}		
-		if ( temp >= 700 )	{ temp = 700;}		
-		temp_offset	= (uint16_t)temp + 500;
-		
-		
-		bit_container[0]	= (uint8_t)(temp_offset >> 3);
-		bit_container[1]	= (uint8_t)(((temp_offset & 0x07) << 5) | ((humi >> 5) & 0x1F));
-		bit_container[2]	= (uint8_t)(((humi & 0x1F) << 3) | ((press >> 11) & 0x07));
-		bit_container[3]	= (uint8_t)((press >> 3) & 0xFF);
-		bit_container[4]	= (uint8_t)(((press & 0x07) << 5) | ((quali >> 4) & 0x1F));
-		bit_container[5]	= (uint8_t)(((quali & 0x0F) << 4) | ((illu >> 14) & 0x0F));
-		bit_container[6]	= (uint8_t)((illu >> 6) & 0xFF);
-		bit_container[7]	= (uint8_t)(((illu & 0x3f) << 2) | ((feuchte >> 14) & 0x03));
-		bit_container[8]	= (uint8_t)((feuchte >> 6) & 0xFF);
-		bit_container[9]	= (uint8_t)(((feuchte & 0x3F) << 2) | (batt & 0x03));
-
-		sprintf(str_buff, "%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
-			bit_container[0],bit_container[1],bit_container[2],bit_container[3],bit_container[4],
-			bit_container[5],bit_container[6],bit_container[7],bit_container[8],bit_container[9]);
-
-		
-		err_code = sd_ble_gap_device_name_set(&sec_mode, str_buff, strlen(str_buff));
-		APP_ERROR_CHECK(err_code);
-
-		err_code = ble_advdata_set(&advdata, NULL);
-		APP_ERROR_CHECK(err_code);
-		advertising_start();
+		sleep_timer_state	= 0;
 }
 
 uint32_t calc_lux(uint8_t *data)
@@ -635,53 +632,36 @@ void max44009_read(void)
 	uint8_t register1	= 0x03;
 	uint8_t register2 = 0x04;
 	
-		TransferPending = 1;
 		nrf_drv_twi_tx(&m_twi, 0x4A, &register1, 1, true);
-		while ( TransferPending == 1) {}
-		TransferPending = 1;
 		nrf_drv_twi_rx(&m_twi, 0x4A, &max44009_data[0], 1);
-		while ( TransferPending == 1) {}
-		TransferPending = 1;
 		nrf_drv_twi_tx(&m_twi, 0x4A, &register2, 1, true);
-		while ( TransferPending == 1) {}
-		TransferPending = 1;
 		nrf_drv_twi_rx(&m_twi, 0x4A, &max44009_data[1], 1);
-		while ( TransferPending == 1) {}
 }
 
-
-
-
-
-static void application_timers_start(void)
+static void application_timers_start(uint32_t time)
 {
     ret_code_t err_code;
-
+		sleep_timer_state	=	1;
     // Start application timers.
-    err_code = app_timer_start(m_mein_timer_id, MEIN_TIMER_INTERVAL, NULL);
+    err_code = app_timer_start(m_sleep_timer_id,  APP_TIMER_TICKS(time), NULL);
     APP_ERROR_CHECK(err_code);
-
 }
 
-__STATIC_INLINE void data_handler(uint8_t temp)
+void sleep(uint32_t t_ms)
 {
-   // NRF_LOG_INFO("Temperature: %d Celsius degrees.", temp);
+	system_time	+=	t_ms;
+	application_timers_start(t_ms);
+	while ( sleep_timer_state == 1 )
+	{	
+		power_manage();	
+	}
 }
 
-void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
+int64_t get_timestamp_us(void)
 {
-    switch (p_event->type)
-    {
-        case NRF_DRV_TWI_EVT_DONE:
-            if (p_event->xfer_desc.type == NRF_DRV_TWI_XFER_RX)
-            {
-                data_handler(m_sample);
-            }
-						TransferPending = 0;
-            break;
-        default:
-            break;
-    }
+    int64_t system_current_time = 0;
+		system_current_time	= (int64_t)system_time * 1000;
+    return system_current_time;
 }
 
 void twi_init (void)
@@ -696,120 +676,61 @@ void twi_init (void)
        .clear_bus_init     = false
     };
 
-    err_code = nrf_drv_twi_init(&m_twi, &twi_bme680_config, twi_handler, NULL);
+//		err_code = nrf_drv_twi_init(&m_twi, &twi_bme680_config, twi_handler, NULL);		// non blocking
+    err_code = nrf_drv_twi_init(&m_twi, &twi_bme680_config, NULL, NULL);					// blocking
     APP_ERROR_CHECK(err_code);
 
     nrf_drv_twi_enable(&m_twi);
 }
 
-
-
-void bme680_setup(void)
-{
-	uint8_t set_required_settings;
-
-	
-	gas_sensor.dev_id = BME680_I2C_ADDR_SECONDARY;
-	gas_sensor.intf = BME680_I2C_INTF;
-	gas_sensor.read = user_i2c_read;
-	gas_sensor.write = user_i2c_write;
-	gas_sensor.delay_ms = user_delay_ms;
-
-	bme680_init(&gas_sensor);	
-
-	/* Set the temperature, pressure and humidity settings */
-	gas_sensor.tph_sett.os_hum = BME680_OS_2X;
-	gas_sensor.tph_sett.os_pres = BME680_OS_4X;
-	gas_sensor.tph_sett.os_temp = BME680_OS_8X;
-	gas_sensor.tph_sett.filter = BME680_FILTER_SIZE_3;
-
-	/* Set the remaining gas sensor settings and link the heating profile */
-	gas_sensor.gas_sett.run_gas = BME680_DISABLE_GAS_MEAS;
-	/* Create a ramp heat waveform in 3 steps */
-	gas_sensor.gas_sett.heatr_temp = 0;//320; /* degree Celsius */
-	gas_sensor.gas_sett.heatr_dur = 0;//150; /* milliseconds */
-
-	/* Select the power mode */
-	/* Must be set before writing the sensor configuration */
-	gas_sensor.power_mode = BME680_FORCED_MODE; 
-
-	/* Set the required sensor settings needed */
-	set_required_settings = BME680_OST_SEL | BME680_OSP_SEL | BME680_OSH_SEL | BME680_FILTER_SEL | BME680_GAS_SENSOR_SEL;
-		
-	/* Set the desired sensor configuration */
-	bme680_set_sensor_settings(set_required_settings,&gas_sensor);
-}
-
-void bme680_read(void)
-{
-
-	/* Set the power mode */
-	bme680_set_sensor_mode(&gas_sensor);
-
-	/* Get the total measurement duration so as to sleep or wait till the
-	 * measurement is complete */
-
-	bme680_get_profile_dur(&meas_period, &gas_sensor);
-	user_delay_ms(meas_period); /* Delay till the measurement is ready */
-	
-
-	bme680_get_sensor_data(&bme680_data, &gas_sensor);
-
-//	NRF_LOG_INFO("T: %.2d degC, P: %.2d hPa, H %.2d %%rH, G: %d ohms ", (uint32_t)(bme680_data.temperature), (uint32_t)(bme680_data.pressure), (uint32_t)(bme680_data.humidity), (uint32_t)bme680_data.gas_resistance);
-	if(bme680_data.status & BME680_HEAT_STAB_MSK)
-	{
-		NRF_LOG_INFO(", G: %d ohms", (uint32_t)bme680_data.gas_resistance);
-	}
-}
-
-void user_delay_ms(uint32_t period)
-{
-//	NRF_LOG_INFO("DL: %dms", period);
-	nrf_delay_ms(period);
-}
-
-
-int8_t user_i2c_read(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)
+int8_t bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len)
 {
     int8_t rslt = 0; /* Return 0 for Success, non-zero for failure */
 
-		TransferPending = 1;
 		rslt = nrf_drv_twi_tx(&m_twi, BME680_ADDR, &reg_addr, 1, true);
-		while ( TransferPending == 1) {}
-		TransferPending = 1;
-		rslt = nrf_drv_twi_rx(&m_twi, BME680_ADDR, reg_data, len);
-		while ( TransferPending == 1) {}
-		
-		//Print: RD <reg_addr> <len> <reg_data... >
-//		NRF_LOG_INFO(" RD: reg_addr: 0x%x,; length: %d,  ",reg_addr, len);
-//		for ( uint16_t i = 0; i < len; i++)
-//			{
-//				NRF_LOG_INFO("RD: reg_data[%d]: 0x%x", i, reg_data[i]);
-//			}
-				
+		rslt = nrf_drv_twi_rx(&m_twi, BME680_ADDR, reg_data_ptr, data_len);
+
     return rslt;
 }
 
-int8_t user_i2c_write(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)
+int8_t bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data_ptr, uint8_t data_len)
 {
     int8_t rslt = 0; /* Return 0 for Success, non-zero for failure */
     uint8_t	send_tmp[200]	= {0};
 		send_tmp[0] 	= reg_addr;
-		memcpy(send_tmp +1, reg_data, len);
+		memcpy(send_tmp +1, reg_data_ptr, data_len);
 
-		//Print: WR <reg_addr> <len> <reg_data... > 
-//		NRF_LOG_INFO(" WR: reg_addr: 0x%x,; length: %d,  ",reg_addr, len);
-//		for ( uint16_t i = 0; i < len; i++)
-//			{
-//				NRF_LOG_INFO("WR: reg_data[%d]: 0x%x", i, reg_data[i]);
-//			}
-		
-		TransferPending = 1;
-		rslt = nrf_drv_twi_tx(&m_twi, BME680_ADDR, send_tmp, len +1, false);
-		while (TransferPending == 1) {}
+		rslt = nrf_drv_twi_tx(&m_twi, BME680_ADDR, send_tmp, data_len +1, false);
 	
     return rslt;
 }
 
-
-
+void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy, float temperature, float humidity,
+     float pressure, float raw_temperature, float raw_humidity, float gas, bsec_library_return_t bsec_status)
+{
+	int16_t	temp = (uint16_t)(temperature * 10);
+		if ( temp <= -500 )	{ temp = -500;}		
+		if ( temp >= 700 )	{ temp = 700;}		
+		bme680_temp_offset	= (uint16_t)(temp + 500);						// offset um ins positive zu kommen
+		bme680_press				= (uint32_t)(pressure / 10);
+		bme680_humi					= (uint32_t)(humidity * 10);
+		bme680_quali				= (uint16_t)iaq;
+		
+		NRF_LOG_INFO("************************************");
+		NRF_LOG_INFO("bme680_temp_offset:%d",bme680_temp_offset);
+		NRF_LOG_INFO("bme680_press:%d",bme680_press);
+		NRF_LOG_INFO("bme680_humi:%d",bme680_humi);
+		NRF_LOG_INFO("bme680_quali:%d",bme680_quali);
+		NRF_LOG_INFO("************************************");
+		NRF_LOG_INFO("timestamp:%u",timestamp);
+		NRF_LOG_INFO("iaq:"NRF_LOG_FLOAT_MARKER"", NRF_LOG_FLOAT(iaq));
+		NRF_LOG_INFO("iaq_accuracy:%d",iaq_accuracy);
+		NRF_LOG_INFO("temperature:"NRF_LOG_FLOAT_MARKER"", NRF_LOG_FLOAT(temperature));
+		NRF_LOG_INFO("humidity:"NRF_LOG_FLOAT_MARKER"", NRF_LOG_FLOAT(humidity));
+		NRF_LOG_INFO("pressure:"NRF_LOG_FLOAT_MARKER"", NRF_LOG_FLOAT(pressure));
+		NRF_LOG_INFO("raw_temperature:"NRF_LOG_FLOAT_MARKER"", NRF_LOG_FLOAT(raw_temperature));
+		NRF_LOG_INFO("raw_humidity:"NRF_LOG_FLOAT_MARKER"", NRF_LOG_FLOAT(raw_humidity));
+		NRF_LOG_INFO("gas:"NRF_LOG_FLOAT_MARKER"", NRF_LOG_FLOAT(gas));
+		NRF_LOG_INFO("bsec_status:%d",bsec_status);
+		NRF_LOG_INFO("************************************");
+}

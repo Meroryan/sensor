@@ -3,7 +3,7 @@
 .\_build\nrf_fprintf_format.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\nrf_fprintf_format.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\nrf_fprintf_format.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\_build\nrf_fprintf_format.o: ..\sensor\sdk_config.h
+.\_build\nrf_fprintf_format.o: ..\trunk\sdk_config.h
 .\_build\nrf_fprintf_format.o: .\nordic\h\nordic_common.h
 .\_build\nrf_fprintf_format.o: .\nordic\h\compiler_abstraction.h
 .\_build\nrf_fprintf_format.o: .\nordic\h\sdk_os.h

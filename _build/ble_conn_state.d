@@ -33,7 +33,7 @@
 .\_build\ble_conn_state.o: .\nordic\h\app_error.h
 .\_build\ble_conn_state.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\ble_conn_state.o: .\nordic\h\sdk_errors.h
-.\_build\ble_conn_state.o: ..\sensor\sdk_config.h
+.\_build\ble_conn_state.o: ..\trunk\sdk_config.h
 .\_build\ble_conn_state.o: .\nordic\h\app_error_weak.h
 .\_build\ble_conn_state.o: .\nordic\h\nrf_sdh_ble.h
 .\_build\ble_conn_state.o: .\nordic\h\nrf_section_iter.h

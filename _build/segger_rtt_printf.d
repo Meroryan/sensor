@@ -26,7 +26,7 @@
 .\_build\segger_rtt_printf.o: .\nordic\h\app_error.h
 .\_build\segger_rtt_printf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\segger_rtt_printf.o: .\nordic\h\sdk_errors.h
-.\_build\segger_rtt_printf.o: ..\sensor\sdk_config.h
+.\_build\segger_rtt_printf.o: ..\trunk\sdk_config.h
 .\_build\segger_rtt_printf.o: .\nordic\h\app_error_weak.h
 .\_build\segger_rtt_printf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\_build\segger_rtt_printf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

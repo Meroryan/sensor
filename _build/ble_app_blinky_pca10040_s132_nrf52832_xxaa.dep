@@ -1,1473 +1,1626 @@
 Dependencies for Project 'ble_app_blinky_pca10040_s132', Target 'nrf52832_xxaa': (DO NOT MODIFY !)
-F (main.c)(0x59E77A6F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
+F (main.c)(0x59F3BFBE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (.\nordic\h\ble_hci.h)(0x59D9D5AE)
-I (.\nordic\h\ble_srv_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (.\nordic\h\ble_hci.h)(0x59F2676A)
+I (.\nordic\h\ble_srv_common.h)(0x59F2676A)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\ble_advdata.h)(0x59D9D5AE)
-I (.\nordic\h\ble_conn_params.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh_ble.h)(0x59D9D5AE)
-I (.\nordic\h\boards.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpio.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52832_peripherals.h)(0x59D9D5AE)
+I (.\nordic\h\ble_advdata.h)(0x59F2676A)
+I (.\nordic\h\ble_conn_params.h)(0x59F2676A)
+I (.\nordic\h\nrf_sdh.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\nrf_sdh_ble.h)(0x59F2676D)
+I (.\nordic\h\boards.h)(0x59F2676A)
+I (.\nordic\h\nrf_gpio.h)(0x59F2676D)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\pca10040.h)(0x59D9D5AE)
-I (.\nordic\h\app_timer.h)(0x59D9D5AE)
-I (.\nordic\h\app_button.h)(0x59D9D5AE)
-I (.\nordic\h\ble_lbs.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_ctrl.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_backend_interface.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_memobj.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_balloc.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_default_backends.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_delay.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_twi.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_twi.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_twim.h)(0x59D9D5AE)
-I (.\bosch\API\bme680.h)(0x59D9D5AE)
-I (.\bosch\API\bme680_defs.h)(0x59E1E4D9)
+I (.\nordic\h\pca10040.h)(0x59F2676D)
+I (.\nordic\h\app_timer.h)(0x59F26769)
+I (.\nordic\h\app_button.h)(0x59F26769)
+I (.\nordic\h\ble_lbs.h)(0x59F2676A)
+I (.\nordic\h\nrf_ble_gatt.h)(0x59F2676C)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_default_backends.h)(0x59F2676D)
+I (.\nordic\h\nrf_delay.h)(0x59F2676C)
+I (.\nordic\h\nrf_drv_twi.h)(0x59F2676D)
+I (.\nordic\h\nrf_twi.h)(0x59F2676D)
+I (.\nordic\h\nrf_twim.h)(0x59F2676D)
+I (.\bosch\BSEC\algo\bsec_interface.h)(0x59F26765)
+I (.\bosch\BSEC\algo\bsec_datatypes.h)(0x59F26765)
+I (.\bosch\BSEC\example\bsec_integration.h)(0x59F38757)
+I (.\bosch\BSEC\API\bme680.h)(0x59F26764)
+I (.\bosch\BSEC\API\sensor_api_common_types.h)(0x59F26764)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x588BD7A4)
-F (sdk_config.h)(0x59E53462)()
-F (bosch\API\bme680.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\bme680.o --omf_browse .\_build\bme680.crf --depend .\_build\bme680.d)
-I (bosch\API\bme680.h)(0x59D9D5AE)
-I (bosch\API\bme680_defs.h)(0x59E1E4D9)
+F (sdk_config.h)(0x59F37DA8)()
+F (.\bosch\BSEC\algo\bin\ARM_CORTEX\ARMCC\IAQ_OUT\Cortex_M4F\libalgobsec.lib)(0x59F26765)()
+F (.\bosch\BSEC\API\bme680.c)(0x59F26764)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\bme680.o --omf_browse .\_build\bme680.crf --depend .\_build\bme680.d)
+I (bosch\BSEC\API\bme680.h)(0x59F26764)
+I (bosch\BSEC\API\sensor_api_common_types.h)(0x59F26764)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-F (nordic\c\boards.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\boards.o --omf_browse .\_build\boards.crf --depend .\_build\boards.d)
-I (.\nordic\h\boards.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpio.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
+I (bosch\BSEC\API\bme680_calculations.h)(0x59F26764)
+I (bosch\BSEC\API\bme680_internal.h)(0x59F26764)
+F (.\bosch\BSEC\API\bme680_calculations.c)(0x59F26764)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\bme680_calculations.o --omf_browse .\_build\bme680_calculations.crf --depend .\_build\bme680_calculations.d)
+I (bosch\BSEC\API\bme680_calculations.h)(0x59F26764)
+I (bosch\BSEC\API\bme680.h)(0x59F26764)
+I (bosch\BSEC\API\sensor_api_common_types.h)(0x59F26764)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52832_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+F (.\bosch\BSEC\example\bsec_integration.c)(0x59F38985)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\bsec_integration.o --omf_browse .\_build\bsec_integration.crf --depend .\_build\bsec_integration.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\pca10040.h)(0x59D9D5AE)
-F (nordic\c\ble_advdata.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_advdata.o --omf_browse .\_build\ble_advdata.crf --depend .\_build\ble_advdata.d)
-I (.\nordic\h\ble_advdata.h)(0x59D9D5AE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (bosch\BSEC\example\bsec_integration.h)(0x59F38757)
+I (.\bosch\BSEC\API\bme680.h)(0x59F26764)
+I (.\bosch\BSEC\API\sensor_api_common_types.h)(0x59F26764)
+I (.\bosch\BSEC\algo\bsec_datatypes.h)(0x59F26765)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\ble_srv_common.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\ble_conn_params.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_conn_params.o --omf_browse .\_build\ble_conn_params.crf --depend .\_build\ble_conn_params.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\bosch\BSEC\algo\bsec_interface.h)(0x59F26765)
+F (nordic\c\boards.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\boards.o --omf_browse .\_build\boards.crf --depend .\_build\boards.d)
+I (.\nordic\h\boards.h)(0x59F2676A)
+I (.\nordic\h\nrf_gpio.h)(0x59F2676D)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\ble_hci.h)(0x59D9D5AE)
-I (.\nordic\h\ble_conn_params.h)(0x59D9D5AE)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (.\nordic\h\ble_srv_common.h)(0x59D9D5AE)
-I (.\nordic\h\ble_conn_state.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_mapped_flags.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh_ble.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\app_timer.h)(0x59D9D5AE)
-F (nordic\c\ble_conn_state.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_conn_state.o --omf_browse .\_build\ble_conn_state.crf --depend .\_build\ble_conn_state.d)
-I (.\nordic\h\ble_conn_state.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_mapped_flags.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh_ble.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-F (nordic\c\ble_srv_common.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_srv_common.o --omf_browse .\_build\ble_srv_common.crf --depend .\_build\ble_srv_common.d)
-I (.\nordic\h\ble_srv_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-F (nordic\c\nrf_ble_gatt.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_ble_gatt.o --omf_browse .\_build\nrf_ble_gatt.crf --depend .\_build\nrf_ble_gatt.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\pca10040.h)(0x59F2676D)
+F (nordic\c\ble_advdata.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_advdata.o --omf_browse .\_build\ble_advdata.crf --depend .\_build\ble_advdata.d)
+I (.\nordic\h\ble_advdata.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\ble_lbs.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_lbs.o --omf_browse .\_build\ble_lbs.crf --depend .\_build\ble_lbs.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\ble_srv_common.h)(0x59F2676A)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+F (nordic\c\ble_conn_params.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_conn_params.o --omf_browse .\_build\ble_conn_params.crf --depend .\_build\ble_conn_params.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\ble_lbs.h)(0x59D9D5AE)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (.\nordic\h\ble_srv_common.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh_ble.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-F (nordic\c\nrf_drv_clock.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_clock.o --omf_browse .\_build\nrf_drv_clock.crf --depend .\_build\nrf_drv_clock.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_clock.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_clock.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_drv_common.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_common.o --omf_browse .\_build\nrf_drv_common.crf --depend .\_build\nrf_drv_common.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf_drv_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52832_peripherals.h)(0x59D9D5AE)
-F (nordic\c\nrf_drv_gpiote.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_gpiote.o --omf_browse .\_build\nrf_drv_gpiote.crf --depend .\_build\nrf_drv_gpiote.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_gpiote.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpiote.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52832_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpio.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\nrf_drv_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_bitmask.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_drv_uart.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_uart.o --omf_browse .\_build\nrf_drv_uart.crf --depend .\_build\nrf_drv_uart.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\ble_hci.h)(0x59F2676A)
+I (.\nordic\h\ble_conn_params.h)(0x59F2676A)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (.\nordic\h\ble_srv_common.h)(0x59F2676A)
+I (.\nordic\h\ble_conn_state.h)(0x59F2676A)
+I (.\nordic\h\sdk_mapped_flags.h)(0x59F2676E)
+I (.\nordic\h\nrf_sdh_ble.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\app_timer.h)(0x59F26769)
+F (nordic\c\ble_conn_state.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_conn_state.o --omf_browse .\_build\ble_conn_state.crf --depend .\_build\ble_conn_state.d)
+I (.\nordic\h\ble_conn_state.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (.\nordic\h\sdk_mapped_flags.h)(0x59F2676E)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_sdh_ble.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+F (nordic\c\ble_srv_common.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_srv_common.o --omf_browse .\_build\ble_srv_common.crf --depend .\_build\ble_srv_common.d)
+I (.\nordic\h\ble_srv_common.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+F (nordic\c\nrf_ble_gatt.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_ble_gatt.o --omf_browse .\_build\nrf_ble_gatt.crf --depend .\_build\nrf_ble_gatt.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_uart.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52832_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_uart.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_uarte.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_ble_gatt.h)(0x59F2676C)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\ble_lbs.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\ble_lbs.o --omf_browse .\_build\ble_lbs.crf --depend .\_build\ble_lbs.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\ble_lbs.h)(0x59F2676A)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (.\nordic\h\ble_srv_common.h)(0x59F2676A)
+I (.\nordic\h\nrf_sdh_ble.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_common.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpio.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+F (nordic\c\nrf_drv_clock.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_clock.o --omf_browse .\_build\nrf_drv_clock.crf --depend .\_build\nrf_drv_clock.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_drv_clock.h)(0x59F2676C)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_clock.h)(0x59F2676C)
+I (.\nordic\h\nrf_drv_common.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_sdh.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_sdh_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\nrf_drv_common.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_common.o --omf_browse .\_build\nrf_drv_common.crf --depend .\_build\nrf_drv_common.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf_drv_common.h)(0x59F2676C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
+F (nordic\c\nrf_drv_gpiote.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_gpiote.o --omf_browse .\_build\nrf_drv_gpiote.crf --depend .\_build\nrf_drv_gpiote.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_drv_gpiote.h)(0x59F2676C)
+I (.\nordic\h\nrf_gpiote.h)(0x59F2676D)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
+I (.\nordic\h\nrf_gpio.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_drv_twi.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_twi.o --omf_browse .\_build\nrf_drv_twi.crf --depend .\_build\nrf_drv_twi.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_drv_common.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_bitmask.h)(0x59F2676C)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\nrf_drv_uart.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_uart.o --omf_browse .\_build\nrf_drv_uart.crf --depend .\_build\nrf_drv_uart.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_twi.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52832_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_twi.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_twim.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_common.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_drv_uart.h)(0x59F2676D)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
+I (.\nordic\h\nrf_uart.h)(0x59F2676D)
+I (.\nordic\h\nrf_uarte.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpio.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_drv_common.h)(0x59F2676C)
+I (.\nordic\h\nrf_gpio.h)(0x59F2676D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_delay.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\app_button.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_button.o --omf_browse .\_build\app_button.crf --depend .\_build\app_button.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\nrf_drv_twi.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_drv_twi.o --omf_browse .\_build\nrf_drv_twi.crf --depend .\_build\nrf_drv_twi.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\app_button.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_drv_twi.h)(0x59F2676D)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
+I (.\nordic\h\nrf_twi.h)(0x59F2676D)
+I (.\nordic\h\nrf_twim.h)(0x59F2676D)
+I (.\nordic\h\nrf_drv_common.h)(0x59F2676C)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpio.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52832_peripherals.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_gpio.h)(0x59F2676D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\app_timer.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_drv_gpiote.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_gpiote.h)(0x59D9D5AE)
-F (nordic\c\app_error.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_error.o --omf_browse .\_build\app_error.crf --depend .\_build\app_error.d)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_delay.h)(0x59F2676C)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\app_button.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_button.o --omf_browse .\_build\app_button.crf --depend .\_build\app_button.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-F (nordic\c\app_error_weak.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_error_weak.o --omf_browse .\_build\app_error_weak.crf --depend .\_build\app_error_weak.d)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_ctrl.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_backend_interface.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_memobj.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\app_button.h)(0x59F26769)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_gpio.h)(0x59F2676D)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\nrf_balloc.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-F (nordic\c\app_scheduler.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_scheduler.o --omf_browse .\_build\app_scheduler.crf --depend .\_build\app_scheduler.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\app_timer.h)(0x59F26769)
+I (.\nordic\h\nrf_drv_gpiote.h)(0x59F2676C)
+I (.\nordic\h\nrf_gpiote.h)(0x59F2676D)
+F (nordic\c\app_error.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_error.o --omf_browse .\_build\app_error.crf --depend .\_build\app_error.d)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\app_scheduler.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+F (nordic\c\app_error_weak.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_error_weak.o --omf_browse .\_build\app_error_weak.crf --depend .\_build\app_error_weak.d)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-F (nordic\c\app_timer.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_timer.o --omf_browse .\_build\app_timer.crf --depend .\_build\app_timer.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+F (nordic\c\app_scheduler.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_scheduler.o --omf_browse .\_build\app_scheduler.crf --depend .\_build\app_scheduler.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\app_timer.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\app_scheduler.h)(0x59F26769)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_delay.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-F (nordic\c\app_util_platform.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_util_platform.o --omf_browse .\_build\app_util_platform.crf --depend .\_build\app_util_platform.d)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-F (nordic\c\hardfault_implementation.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\hardfault_implementation.o --omf_browse .\_build\hardfault_implementation.crf --depend .\_build\hardfault_implementation.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+F (nordic\c\app_timer.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_timer.o --omf_browse .\_build\app_timer.crf --depend .\_build\app_timer.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\nrf_assert.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_assert.o --omf_browse .\_build\nrf_assert.crf --depend .\_build\nrf_assert.d)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\app_timer.h)(0x59F26769)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-F (nordic\c\nrf_atfifo.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_atfifo.o --omf_browse .\_build\nrf_atfifo.crf --depend .\_build\nrf_atfifo.d)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_delay.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+F (nordic\c\app_util_platform.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\app_util_platform.o --omf_browse .\_build\app_util_platform.crf --depend .\_build\app_util_platform.d)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_atfifo.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_atfifo_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_balloc.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_balloc.o --omf_browse .\_build\nrf_balloc.crf --depend .\_build\nrf_balloc.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+F (nordic\c\hardfault_implementation.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\hardfault_implementation.o --omf_browse .\_build\hardfault_implementation.crf --depend .\_build\hardfault_implementation.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_balloc.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+F (nordic\c\nrf_assert.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_assert.o --omf_browse .\_build\nrf_assert.crf --depend .\_build\nrf_assert.d)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_fprintf.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_fprintf.o --omf_browse .\_build\nrf_fprintf.crf --depend .\_build\nrf_fprintf.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+F (nordic\c\nrf_atfifo.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_atfifo.o --omf_browse .\_build\nrf_atfifo.crf --depend .\_build\nrf_atfifo.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\nrf_atfifo.h)(0x59F2676C)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_atfifo_internal.h)(0x59F2676C)
+F (nordic\c\nrf_balloc.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_balloc.o --omf_browse .\_build\nrf_balloc.crf --depend .\_build\nrf_balloc.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\nrf_fprintf.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_fprintf.o --omf_browse .\_build\nrf_fprintf.crf --depend .\_build\nrf_fprintf.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x588BD7A4)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_fprintf_format.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_fprintf.h)(0x59D9D5AE)
-F (nordic\c\nrf_fprintf_format.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_fprintf_format.o --omf_browse .\_build\nrf_fprintf_format.crf --depend .\_build\nrf_fprintf_format.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_fprintf_format.h)(0x59F2676D)
+I (.\nordic\h\nrf_fprintf.h)(0x59F2676D)
+F (nordic\c\nrf_fprintf_format.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_fprintf_format.o --omf_browse .\_build\nrf_fprintf_format.crf --depend .\_build\nrf_fprintf_format.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x588BD7A4)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_fprintf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_fprintf_format.h)(0x59D9D5AE)
-F (nordic\c\nrf_memobj.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_memobj.o --omf_browse .\_build\nrf_memobj.crf --depend .\_build\nrf_memobj.d)
-I (.\nordic\h\nrf_memobj.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_fprintf.h)(0x59F2676D)
+I (.\nordic\h\nrf_fprintf_format.h)(0x59F2676D)
+F (nordic\c\nrf_memobj.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_memobj.o --omf_browse .\_build\nrf_memobj.crf --depend .\_build\nrf_memobj.d)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nrf_balloc.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_atomic.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_atomic.h)(0x59F2676C)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_atomic_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_pwr_mgmt.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_pwr_mgmt.o --omf_browse .\_build\nrf_pwr_mgmt.crf --depend .\_build\nrf_pwr_mgmt.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_atomic_internal.h)(0x59F2676C)
+F (nordic\c\nrf_pwr_mgmt.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_pwr_mgmt.o --omf_browse .\_build\nrf_pwr_mgmt.crf --depend .\_build\nrf_pwr_mgmt.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_pwr_mgmt.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_pwr_mgmt.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_mtx.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_atomic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_atomic_internal.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_power.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_ctrl.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_backend_interface.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_memobj.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_mtx.h)(0x59F2676D)
+I (.\nordic\h\nrf_atomic.h)(0x59F2676C)
+I (.\nordic\h\nrf_atomic_internal.h)(0x59F2676C)
+I (.\nordic\h\nrf_power.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
-I (.\nordic\h\nrf_balloc.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh.h)(0x59D9D5AE)
-F (nordic\c\nrf_section_iter.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_section_iter.o --omf_browse .\_build\nrf_section_iter.crf --depend .\_build\nrf_section_iter.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_sdh.h)(0x59F2676D)
+F (nordic\c\nrf_section_iter.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_section_iter.o --omf_browse .\_build\nrf_section_iter.crf --depend .\_build\nrf_section_iter.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-F (nordic\c\nrf_strerror.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_strerror.o --omf_browse .\_build\nrf_strerror.crf --depend .\_build\nrf_strerror.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+F (nordic\c\nrf_strerror.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_strerror.o --omf_browse .\_build\nrf_strerror.crf --depend .\_build\nrf_strerror.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_strerror.h)(0x59D9D5AE)
-F (nordic\c\sdk_mapped_flags.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\sdk_mapped_flags.o --omf_browse .\_build\sdk_mapped_flags.crf --depend .\_build\sdk_mapped_flags.d)
-I (.\nordic\h\sdk_mapped_flags.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+F (nordic\c\sdk_mapped_flags.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\sdk_mapped_flags.o --omf_browse .\_build\sdk_mapped_flags.crf --depend .\_build\sdk_mapped_flags.d)
+I (.\nordic\h\sdk_mapped_flags.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-F (nordic\c\nrf_log_backend_rtt.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_backend_rtt.o --omf_browse .\_build\nrf_log_backend_rtt.crf --depend .\_build\nrf_log_backend_rtt.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\nrf_log_backend_serial.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_backend_serial.o --omf_browse .\_build\nrf_log_backend_serial.crf --depend .\_build\nrf_log_backend_serial.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+F (nordic\c\nrf_log_backend_rtt.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_backend_rtt.o --omf_browse .\_build\nrf_log_backend_rtt.crf --depend .\_build\nrf_log_backend_rtt.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\nrf_log_backend_uart.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_backend_uart.o --omf_browse .\_build\nrf_log_backend_uart.crf --depend .\_build\nrf_log_backend_uart.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\nrf_log_default_backends.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_default_backends.o --omf_browse .\_build\nrf_log_default_backends.crf --depend .\_build\nrf_log_default_backends.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\nrf_log_frontend.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_frontend.o --omf_browse .\_build\nrf_log_frontend.crf --depend .\_build\nrf_log_frontend.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\nrf_log_str_formatter.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_str_formatter.o --omf_browse .\_build\nrf_log_str_formatter.crf --depend .\_build\nrf_log_str_formatter.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-F (nordic\c\RTT_Syscalls_KEIL.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\rtt_syscalls_keil.o --omf_browse .\_build\rtt_syscalls_keil.crf --depend .\_build\rtt_syscalls_keil.d)
-F (nordic\c\SEGGER_RTT.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\segger_rtt.o --omf_browse .\_build\segger_rtt.crf --depend .\_build\segger_rtt.d)
-I (.\nordic\h\SEGGER_RTT.h)(0x59D9D5AE)
-I (.\nordic\h\SEGGER_RTT_Conf.h)(0x59D9D5AE)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_log_backend_rtt.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-F (nordic\c\SEGGER_RTT_printf.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\segger_rtt_printf.o --omf_browse .\_build\segger_rtt_printf.crf --depend .\_build\segger_rtt_printf.d)
-I (.\nordic\h\SEGGER_RTT.h)(0x59D9D5AE)
-I (.\nordic\h\SEGGER_RTT_Conf.h)(0x59D9D5AE)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\app_util_platform.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_log_backend_serial.h)(0x59F2676D)
+I (.\nordic\h\nrf_fprintf.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_str_formatter.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (.\nordic\h\SEGGER_RTT_Conf.h)(0x59F26768)
+I (.\nordic\h\SEGGER_RTT.h)(0x59F26768)
+F (nordic\c\nrf_log_backend_serial.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_backend_serial.o --omf_browse .\_build\nrf_log_backend_serial.crf --depend .\_build\nrf_log_backend_serial.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_log_backend_serial.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_fprintf.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_str_formatter.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\nrf_log_backend_uart.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_backend_uart.o --omf_browse .\_build\nrf_log_backend_uart.crf --depend .\_build\nrf_log_backend_uart.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_log_backend_uart.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_log_backend_serial.h)(0x59F2676D)
+I (.\nordic\h\nrf_fprintf.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_drv_uart.h)(0x59F2676D)
+I (.\nordic\h\nrf_peripherals.h)(0x59F2676D)
+I (.\nordic\h\nrf52832_peripherals.h)(0x59F2676B)
+I (.\nordic\h\nrf_uart.h)(0x59F2676D)
+I (.\nordic\h\nrf_uarte.h)(0x59F2676D)
+F (nordic\c\nrf_log_default_backends.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_default_backends.o --omf_browse .\_build\nrf_log_default_backends.crf --depend .\_build\nrf_log_default_backends.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_log_default_backends.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_uart.h)(0x59F2676D)
+F (nordic\c\nrf_log_frontend.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_frontend.o --omf_browse .\_build\nrf_log_frontend.crf --depend .\_build\nrf_log_frontend.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\nrf_atomic.h)(0x59F2676C)
+I (.\nordic\h\nrf_atomic_internal.h)(0x59F2676C)
+F (nordic\c\nrf_log_str_formatter.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_log_str_formatter.o --omf_browse .\_build\nrf_log_str_formatter.crf --depend .\_build\nrf_log_str_formatter.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_log_str_formatter.h)(0x59F2676D)
+I (.\nordic\h\nrf_fprintf.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_ctrl_internal.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_backend_interface.h)(0x59F2676D)
+I (.\nordic\h\nrf_memobj.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
+I (.\nordic\h\nrf_balloc.h)(0x59F2676C)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x588BD7A4)
+F (nordic\c\RTT_Syscalls_KEIL.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\rtt_syscalls_keil.o --omf_browse .\_build\rtt_syscalls_keil.crf --depend .\_build\rtt_syscalls_keil.d)
+F (nordic\c\SEGGER_RTT.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\segger_rtt.o --omf_browse .\_build\segger_rtt.crf --depend .\_build\segger_rtt.d)
+I (.\nordic\h\SEGGER_RTT.h)(0x59F26768)
+I (.\nordic\h\SEGGER_RTT_Conf.h)(0x59F26768)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
+F (nordic\c\SEGGER_RTT_printf.c)(0x59F26766)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\segger_rtt_printf.o --omf_browse .\_build\segger_rtt_printf.crf --depend .\_build\segger_rtt_printf.d)
+I (.\nordic\h\SEGGER_RTT.h)(0x59F26768)
+I (.\nordic\h\SEGGER_RTT_Conf.h)(0x59F26768)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\app_util_platform.h)(0x59F2676A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x588BD7A4)
-F (nordic\c\nrf_sdh.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_sdh.o --omf_browse .\_build\nrf_sdh.crf --depend .\_build\nrf_sdh.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+F (nordic\c\nrf_sdh.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_sdh.o --omf_browse .\_build\nrf_sdh.crf --depend .\_build\nrf_sdh.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_sdh.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdm.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_sdm.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_nvic.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_sdh_ble.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_sdh_ble.o --omf_browse .\_build\nrf_sdh_ble.crf --depend .\_build\nrf_sdh_ble.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_sdm.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_sdm.h)(0x59F2676D)
+I (.\nordic\h\nrf_nvic.h)(0x59F2676D)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\nrf_sdh_ble.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_sdh_ble.o --omf_browse .\_build\nrf_sdh_ble.crf --depend .\_build\nrf_sdh_ble.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh_ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble.h)(0x59D9D5AE)
-I (.\nordic\h\ble_ranges.h)(0x59D9D5AE)
-I (.\nordic\h\ble_types.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gap.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_l2cap.h)(0x59D9D5AE)
-I (.\nordic\h\ble_err.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatt.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gattc.h)(0x59D9D5AE)
-I (.\nordic\h\ble_gatts.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_sdh_ble.h)(0x59F2676D)
+I (.\nordic\h\ble.h)(0x59F2676A)
+I (.\nordic\h\ble_ranges.h)(0x59F2676A)
+I (.\nordic\h\ble_types.h)(0x59F2676A)
+I (.\nordic\h\ble_gap.h)(0x59F2676A)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\ble_l2cap.h)(0x59F2676A)
+I (.\nordic\h\ble_err.h)(0x59F2676A)
+I (.\nordic\h\ble_gatt.h)(0x59F2676A)
+I (.\nordic\h\ble_gattc.h)(0x59F2676A)
+I (.\nordic\h\ble_gatts.h)(0x59F2676A)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_strerror.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (nordic\c\nrf_sdh_soc.c)(0x59D9D5AE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_sdh_soc.o --omf_browse .\_build\nrf_sdh_soc.crf --depend .\_build\nrf_sdh_soc.d)
-I (.\nordic\h\sdk_common.h)(0x59D9D5AE)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_sdh.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (nordic\c\nrf_sdh_soc.c)(0x59F26767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\nrf_sdh_soc.o --omf_browse .\_build\nrf_sdh_soc.crf --depend .\_build\nrf_sdh_soc.d)
+I (.\nordic\h\sdk_common.h)(0x59F2676E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588BD7A4)
-I (..\sensor\sdk_config.h)(0x59E53462)
-I (.\nordic\h\nordic_common.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_os.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_errors.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error.h)(0x59D9D5AE)
-I (.\nordic\h\app_util.h)(0x59D9D5AE)
+I (..\trunk\sdk_config.h)(0x59F37DA8)
+I (.\nordic\h\nordic_common.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
+I (.\nordic\h\sdk_os.h)(0x59F2676E)
+I (.\nordic\h\sdk_errors.h)(0x59F2676E)
+I (.\nordic\h\nrf_error.h)(0x59F2676D)
+I (.\nordic\h\app_util.h)(0x59F2676A)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\sdk_macros.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section_iter.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_section.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_assert.h)(0x59D9D5AE)
-I (.\nordic\h\app_error.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\sdk_macros.h)(0x59F2676E)
+I (.\nordic\h\nrf_sdh_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_section_iter.h)(0x59F2676D)
+I (.\nordic\h\nrf_section.h)(0x59F2676D)
+I (.\nordic\h\nrf_assert.h)(0x59F2676C)
+I (.\nordic\h\app_error.h)(0x59F26769)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588BD7A4)
-I (.\nordic\h\app_error_weak.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_svc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_error_soc.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_sdh.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log.h)(0x59D9D5AE)
-I (.\nordic\h\nrf_log_internal.h)(0x59D9D5AE)
-F (RTE\Device\nRF52832_xxAA\arm_startup_nrf52.s)(0x5936B5CE)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\..\..\config -I ..\..\..\..\..\..\components -I ..\..\..\..\..\..\components\ble\ble_advertising -I ..\..\..\..\..\..\components\ble\ble_dtm -I ..\..\..\..\..\..\components\ble\ble_racp -I ..\..\..\..\..\..\components\ble\ble_services\ble_ancs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_ans_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_bas -I ..\..\..\..\..\..\components\ble\ble_services\ble_bas_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_cscs -I ..\..\..\..\..\..\components\ble\ble_services\ble_cts_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_dfu -I ..\..\..\..\..\..\components\ble\ble_services\ble_dis -I ..\..\..\..\..\..\components\ble\ble_services\ble_gls -I ..\..\..\..\..\..\components\ble\ble_services\ble_hids -I ..\..\..\..\..\..\components\ble\ble_services\ble_hrs -I ..\..\..\..\..\..\components\ble\ble_services\ble_hrs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_hts -I ..\..\..\..\..\..\components\ble\ble_services\ble_ias -I ..\..\..\..\..\..\components\ble\ble_services\ble_ias_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_lbs -I ..\..\..\..\..\..\components\ble\ble_services\ble_lbs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_lls -I ..\..\..\..\..\..\components\ble\ble_services\ble_nus -I ..\..\..\..\..\..\components\ble\ble_services\ble_nus_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_rscs -I ..\..\..\..\..\..\components\ble\ble_services\ble_rscs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_tps -I ..\..\..\..\..\..\components\ble\common -I ..\..\..\..\..\..\components\ble\nrf_ble_gatt -I ..\..\..\..\..\..\components\ble\nrf_ble_qwr -I ..\..\..\..\..\..\components\ble\peer_manager -I ..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\components\drivers_nrf\clock -I ..\..\..\..\..\..\components\drivers_nrf\common -I ..\..\..\..\..\..\components\drivers_nrf\comp -I ..\..\..\..\..\..\components\drivers_nrf\delay -I ..\..\..\..\..\..\components\drivers_nrf\gpiote -I ..\..\..\..\..\..\components\drivers_nrf\hal -I ..\..\..\..\..\..\components\drivers_nrf\i2s -I ..\..\..\..\..\..\components\drivers_nrf\lpcomp -I ..\..\..\..\..\..\components\drivers_nrf\pdm -I ..\..\..\..\..\..\components\drivers_nrf\power -I ..\..\..\..\..\..\components\drivers_nrf\ppi -I ..\..\..\..\..\..\components\drivers_nrf\pwm -I ..\..\..\..\..\..\components\drivers_nrf\qdec -I ..\..\..\..\..\..\components\drivers_nrf\rng -I ..\..\..\..\..\..\components\drivers_nrf\rtc -I ..\..\..\..\..\..\components\drivers_nrf\saadc -I ..\..\..\..\..\..\components\drivers_nrf\spi_master -I ..\..\..\..\..\..\components\drivers_nrf\spi_slave -I ..\..\..\..\..\..\components\drivers_nrf\swi -I ..\..\..\..\..\..\components\drivers_nrf\timer -I ..\..\..\..\..\..\components\drivers_nrf\twi_master -I ..\..\..\..\..\..\components\drivers_nrf\twis_slave -I ..\..\..\..\..\..\components\drivers_nrf\uart -I ..\..\..\..\..\..\components\drivers_nrf\usbd -I ..\..\..\..\..\..\components\drivers_nrf\wdt -I ..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\components\libraries\crc16 -I ..\..\..\..\..\..\components\libraries\crc32 -I ..\..\..\..\..\..\components\libraries\csense -I ..\..\..\..\..\..\components\libraries\csense_drv -I ..\..\..\..\..\..\components\libraries\ecc -I ..\..\..\..\..\..\components\libraries\experimental_cli -I ..\..\..\..\..\..\components\libraries\experimental_log -I ..\..\..\..\..\..\components\libraries\experimental_log\src -I ..\..\..\..\..\..\components\libraries\experimental_memobj -I ..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\components\libraries\fds -I ..\..\..\..\..\..\components\libraries\fstorage -I ..\..\..\..\..\..\components\libraries\gpiote -I ..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\components\libraries\hci -I ..\..\..\..\..\..\components\libraries\led_softblink -I ..\..\..\..\..\..\components\libraries\low_power_pwm -I ..\..\..\..\..\..\components\libraries\mem_manager -I ..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\components\libraries\pwm -I ..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\components\libraries\queue -I ..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\components\libraries\slip -I ..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\components\libraries\twi -I ..\..\..\..\..\..\components\libraries\uart -I ..\..\..\..\..\..\components\libraries\usbd -I ..\..\..\..\..\..\components\libraries\usbd\class\audio -I ..\..\..\..\..\..\components\libraries\usbd\class\cdc -I ..\..\..\..\..\..\components\libraries\usbd\class\cdc\acm -I ..\..\..\..\..\..\components\libraries\usbd\class\hid -I ..\..\..\..\..\..\components\libraries\usbd\class\hid\generic -I ..\..\..\..\..\..\components\libraries\usbd\class\hid\kbd -I ..\..\..\..\..\..\components\libraries\usbd\class\hid\mouse -I ..\..\..\..\..\..\components\libraries\usbd\class\msc -I ..\..\..\..\..\..\components\libraries\usbd\config -I ..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\components\softdevice\s132\headers -I ..\..\..\..\..\..\components\softdevice\s132\headers\nrf52 -I ..\..\..\..\..\..\components\toolchain -I ..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\external\segger_rtt -I ..\config  --cpreproc_opts=-DBOARD_PCA10040,-DCONFIG_GPIO_AS_PINRESET,-DNRF52,-DNRF52832_XXAA,-DNRF52_PAN_74,-DNRF_SD_BLE_API_VERSION=5,-DS132,-DSOFTDEVICE_PRESENT,-DSWI_DISABLE0-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "NRF52 SETA 1" --pd "BOARD_PCA10040 SETA 1" --pd "CONFIG_GPIO_AS_PINRESET SETA 1" --pd "NRF52 SETA 1" --pd "NRF52832_XXAA SETA 1" --pd "NRF52_PAN_74 SETA 1" --pd "NRF_SD_BLE_API_VERSION SETA 5" --pd "S132 SETA 1" --pd "SOFTDEVICE_PRESENT SETA 1" --pd "SWI_DISABLE0 SETA 1"--list .\_build\arm_startup_nrf52.lst --xref -o .\_build\arm_startup_nrf52.o --depend .\_build\arm_startup_nrf52.d)
-F (RTE\Device\nRF52832_xxAA\system_nrf52.c)(0x5936B5C6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I .\nordic\h -I .\bosch\API --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\system_nrf52.o --omf_browse .\_build\system_nrf52.crf --depend .\_build\system_nrf52.d)
+I (.\nordic\h\app_error_weak.h)(0x59F26769)
+I (.\nordic\h\nrf_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_svc.h)(0x59F2676D)
+I (.\nordic\h\nrf_error_soc.h)(0x59F2676D)
+I (.\nordic\h\nrf_sdh.h)(0x59F2676D)
+I (.\nordic\h\nrf_log.h)(0x59F2676D)
+I (.\nordic\h\nrf_strerror.h)(0x59F2676D)
+I (.\nordic\h\nrf_log_internal.h)(0x59F2676D)
+F (RTE\Device\nRF52832_xxAA\arm_startup_nrf52.s)(0x59F2673A)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\..\..\config -I ..\..\..\..\..\..\components -I ..\..\..\..\..\..\components\ble\ble_advertising -I ..\..\..\..\..\..\components\ble\ble_dtm -I ..\..\..\..\..\..\components\ble\ble_racp -I ..\..\..\..\..\..\components\ble\ble_services\ble_ancs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_ans_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_bas -I ..\..\..\..\..\..\components\ble\ble_services\ble_bas_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_cscs -I ..\..\..\..\..\..\components\ble\ble_services\ble_cts_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_dfu -I ..\..\..\..\..\..\components\ble\ble_services\ble_dis -I ..\..\..\..\..\..\components\ble\ble_services\ble_gls -I ..\..\..\..\..\..\components\ble\ble_services\ble_hids -I ..\..\..\..\..\..\components\ble\ble_services\ble_hrs -I ..\..\..\..\..\..\components\ble\ble_services\ble_hrs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_hts -I ..\..\..\..\..\..\components\ble\ble_services\ble_ias -I ..\..\..\..\..\..\components\ble\ble_services\ble_ias_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_lbs -I ..\..\..\..\..\..\components\ble\ble_services\ble_lbs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_lls -I ..\..\..\..\..\..\components\ble\ble_services\ble_nus -I ..\..\..\..\..\..\components\ble\ble_services\ble_nus_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_rscs -I ..\..\..\..\..\..\components\ble\ble_services\ble_rscs_c -I ..\..\..\..\..\..\components\ble\ble_services\ble_tps -I ..\..\..\..\..\..\components\ble\common -I ..\..\..\..\..\..\components\ble\nrf_ble_gatt -I ..\..\..\..\..\..\components\ble\nrf_ble_qwr -I ..\..\..\..\..\..\components\ble\peer_manager -I ..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\components\drivers_nrf\clock -I ..\..\..\..\..\..\components\drivers_nrf\common -I ..\..\..\..\..\..\components\drivers_nrf\comp -I ..\..\..\..\..\..\components\drivers_nrf\delay -I ..\..\..\..\..\..\components\drivers_nrf\gpiote -I ..\..\..\..\..\..\components\drivers_nrf\hal -I ..\..\..\..\..\..\components\drivers_nrf\i2s -I ..\..\..\..\..\..\components\drivers_nrf\lpcomp -I ..\..\..\..\..\..\components\drivers_nrf\pdm -I ..\..\..\..\..\..\components\drivers_nrf\power -I ..\..\..\..\..\..\components\drivers_nrf\ppi -I ..\..\..\..\..\..\components\drivers_nrf\pwm -I ..\..\..\..\..\..\components\drivers_nrf\qdec -I ..\..\..\..\..\..\components\drivers_nrf\rng -I ..\..\..\..\..\..\components\drivers_nrf\rtc -I ..\..\..\..\..\..\components\drivers_nrf\saadc -I ..\..\..\..\..\..\components\drivers_nrf\spi_master -I ..\..\..\..\..\..\components\drivers_nrf\spi_slave -I ..\..\..\..\..\..\components\drivers_nrf\swi -I ..\..\..\..\..\..\components\drivers_nrf\timer -I ..\..\..\..\..\..\components\drivers_nrf\twi_master -I ..\..\..\..\..\..\components\drivers_nrf\twis_slave -I ..\..\..\..\..\..\components\drivers_nrf\uart -I ..\..\..\..\..\..\components\drivers_nrf\usbd -I ..\..\..\..\..\..\components\drivers_nrf\wdt -I ..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\components\libraries\crc16 -I ..\..\..\..\..\..\components\libraries\crc32 -I ..\..\..\..\..\..\components\libraries\csense -I ..\..\..\..\..\..\components\libraries\csense_drv -I ..\..\..\..\..\..\components\libraries\ecc -I ..\..\..\..\..\..\components\libraries\experimental_cli -I ..\..\..\..\..\..\components\libraries\experimental_log -I ..\..\..\..\..\..\components\libraries\experimental_log\src -I ..\..\..\..\..\..\components\libraries\experimental_memobj -I ..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\components\libraries\fds -I ..\..\..\..\..\..\components\libraries\fstorage -I ..\..\..\..\..\..\components\libraries\gpiote -I ..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\components\libraries\hci -I ..\..\..\..\..\..\components\libraries\led_softblink -I ..\..\..\..\..\..\components\libraries\low_power_pwm -I ..\..\..\..\..\..\components\libraries\mem_manager -I ..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\components\libraries\pwm -I ..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\components\libraries\queue -I ..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\components\libraries\slip -I ..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\components\libraries\twi -I ..\..\..\..\..\..\components\libraries\uart -I ..\..\..\..\..\..\components\libraries\usbd -I ..\..\..\..\..\..\components\libraries\usbd\class\audio -I ..\..\..\..\..\..\components\libraries\usbd\class\cdc -I ..\..\..\..\..\..\components\libraries\usbd\class\cdc\acm -I ..\..\..\..\..\..\components\libraries\usbd\class\hid -I ..\..\..\..\..\..\components\libraries\usbd\class\hid\generic -I ..\..\..\..\..\..\components\libraries\usbd\class\hid\kbd -I ..\..\..\..\..\..\components\libraries\usbd\class\hid\mouse -I ..\..\..\..\..\..\components\libraries\usbd\class\msc -I ..\..\..\..\..\..\components\libraries\usbd\config -I ..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\components\softdevice\s132\headers -I ..\..\..\..\..\..\components\softdevice\s132\headers\nrf52 -I ..\..\..\..\..\..\components\toolchain -I ..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\external\segger_rtt -I ..\config  --cpreproc_opts=-DBOARD_PCA10040,-DCONFIG_GPIO_AS_PINRESET,-DNRF52,-DNRF52832_XXAA,-DNRF52_PAN_74,-DNRF_SD_BLE_API_VERSION=5,-DS132,-DSOFTDEVICE_PRESENT,-DSWI_DISABLE0-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "NRF52 SETA 1" --pd "BOARD_PCA10040 SETA 1" --pd "CONFIG_GPIO_AS_PINRESET SETA 1" --pd "NRF52 SETA 1" --pd "NRF52832_XXAA SETA 1" --pd "NRF52_PAN_74 SETA 1" --pd "NRF_SD_BLE_API_VERSION SETA 5" --pd "S132 SETA 1" --pd "SOFTDEVICE_PRESENT SETA 1" --pd "SWI_DISABLE0 SETA 1"--list .\_build\arm_startup_nrf52.lst --xref -o .\_build\arm_startup_nrf52.o --depend .\_build\arm_startup_nrf52.d)
+F (RTE\Device\nRF52832_xxAA\system_nrf52.c)(0x59F2673A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\sensor -I ..\trunk -I .\nordic\h -I .\bosch\BSEC\algo -I .\bosch\BSEC\API -I .\bosch\BSEC\example --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.14.1\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DNRF52 -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DNRF_SD_BLE_API_VERSION="5" -DS132 -DSOFTDEVICE_PRESENT -DSWI_DISABLE0-o .\_build\system_nrf52.o --omf_browse .\_build\system_nrf52.crf --depend .\_build\system_nrf52.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588BD7A4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588BD7A4)
-I (.\nordic\h\nrf.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\core_cm4.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmInstr.h)(0x59D9D5AE)
-I (.\nordic\h\cmsis_armcc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmFunc.h)(0x59D9D5AE)
-I (.\nordic\h\core_cmSimd.h)(0x59D9D5AE)
-I (.\nordic\h\system_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_bitfields.h)(0x59D9D5AE)
-I (.\nordic\h\nrf51_to_nrf52.h)(0x59D9D5AE)
-I (.\nordic\h\nrf52_name_change.h)(0x59D9D5AE)
-I (.\nordic\h\compiler_abstraction.h)(0x59D9D5AE)
+I (.\nordic\h\nrf.h)(0x59F2676B)
+I (.\nordic\h\nrf52.h)(0x59F2676B)
+I (.\nordic\h\core_cm4.h)(0x59F2676B)
+I (.\nordic\h\core_cmInstr.h)(0x59F2676B)
+I (.\nordic\h\cmsis_armcc.h)(0x59F2676A)
+I (.\nordic\h\core_cmFunc.h)(0x59F2676B)
+I (.\nordic\h\core_cmSimd.h)(0x59F2676B)
+I (.\nordic\h\system_nrf52.h)(0x59F2676E)
+I (.\nordic\h\nrf52_bitfields.h)(0x59F2676B)
+I (.\nordic\h\nrf51_to_nrf52.h)(0x59F2676B)
+I (.\nordic\h\nrf52_name_change.h)(0x59F2676B)
+I (.\nordic\h\compiler_abstraction.h)(0x59F2676B)
