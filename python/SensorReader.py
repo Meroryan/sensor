@@ -3,15 +3,19 @@ from bluepy.btle import UUID, Scanner, Peripheral, Characteristic
 #from SensorBase import SensorNode
 import paho.mqtt.client as mqtt
 
-
+#"E2:7F:64:13:56:C9"	# schlafzimmer
+#"CA:74:18:A4:61:79"	# küche
+#"D8:98:5C:FC:D1:A6"	# bad
+#"E1:E3:E9:AC:DF:01"	# Wohnzimmer
+#"F2:8D:38:9E:73:D7"	# aussen
 
 
 AddrWhitelist = [ \
 			"E2:7F:64:13:56:C9",\
-			"cb:ab:c8:3a:6f:1a",\
-			"cb:ab:c8:3a:6f:1b",\
-			"cb:ab:c8:3a:6f:1c",\
-			"cb:ab:c8:3a:6f:1d"\
+			"CA:74:18:A4:61:79",\
+			"D8:98:5C:FC:D1:A6",\
+			"E1:E3:E9:AC:DF:01",\
+			"F2:8D:38:9E:73:D7"\
 			]
 
 MQTTTable = []
