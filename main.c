@@ -442,6 +442,10 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             err_code = sd_ble_user_mem_reply(p_ble_evt->evt.gattc_evt.conn_handle, NULL);
             APP_ERROR_CHECK(err_code);
             break;
+				
+				case BLE_GAP_EVT_SCAN_REQ_REPORT:
+						__ASM("nop");
+						break;
 
         case BLE_GATTS_EVT_RW_AUTHORIZE_REQUEST:
         {
